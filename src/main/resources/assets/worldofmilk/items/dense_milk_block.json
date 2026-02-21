@@ -1,0 +1,6 @@
+{
+    "model": {
+      "type": "minecraft:model",
+      "model": "worldofmilk:block/dense_milk_block"
+    }
+}

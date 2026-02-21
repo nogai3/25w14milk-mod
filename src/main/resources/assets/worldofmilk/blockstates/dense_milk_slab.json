@@ -1,0 +1,13 @@
+{
+    "variants": {
+      "type=bottom": {
+        "model": "worldofmilk:block/dense_milk_slab"
+      },
+      "type=double": {
+        "model": "worldofmilk:block/dense_milk_block"
+      },
+      "type=top": {
+        "model": "worldofmilk:block/dense_milk_slab_top"
+      }
+    }
+}

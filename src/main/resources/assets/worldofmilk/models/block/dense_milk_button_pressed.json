@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/button_pressed",
+    "textures": {
+      "texture": "worldofmilk:block/dense_milk_block"
+    }
+}

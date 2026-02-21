@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab",
+    "textures": {
+      "bottom": "worldofmilk:block/carved_dense_milk_block",
+      "side": "worldofmilk:block/carved_dense_milk_block",
+      "top": "worldofmilk:block/carved_dense_milk_block"
+    }
+}
