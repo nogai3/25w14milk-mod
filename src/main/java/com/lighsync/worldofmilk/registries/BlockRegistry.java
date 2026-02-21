@@ -1,7 +1,11 @@
 package com.lighsync.worldofmilk.registries;
 
 import com.lighsync.worldofmilk.Worldofmilk;
+import com.lighsync.worldofmilk.blocks.JebBlock;
+import com.lighsync.worldofmilk.blocks.MilkLayerBlock;
+import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -25,7 +29,20 @@ public class BlockRegistry {
                             .strength(2.0f, 3.0f)
                             .sound(SoundType.GRASS)
                             .ignitedByLava()
-            ));
+    ));
+
+    public static final RegistryObject<Block> MILK_LAYER_BLOCK = BLOCKS.register("milk_layer_block",
+            () -> new MilkLayerBlock(
+                    BlockBehaviour.Properties.of()
+                            .replaceable()
+                            .forceSolidOff()
+                            .randomTicks()
+                            .strength(0.1f)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.SNOW)
+                            .isViewBlocking((state, level, pos) -> state.getValue(MilkLayerBlock.LAYERS) >= 8)
+                            .pushReaction(PushReaction.DESTROY)
+    ));
 
     public static final RegistryObject<Block> DENSE_MILK_BLOCK = BLOCKS.register("dense_milk_block",
                 () -> new Block(
@@ -136,9 +153,24 @@ public class BlockRegistry {
                     BlockBehaviour.Properties.copy(BlockRegistry.CARVED_DENSE_MILK_BLOCK.get())
     ));
 
-
+    public static final RegistryObject<Block> JEB_BLOCK = BLOCKS.register("jeb_block",
+            () -> new JebBlock(
+                    BlockBehaviour.Properties.of()
+                            .sound(SoundType.STONE)
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.5f)
+                            .noOcclusion()
+                            .ignitedByLava()
+                            .pushReaction(PushReaction.DESTROY)
+                            .isRedstoneConductor(BlockRegistry::never)
+                            .pushReaction(PushReaction.BLOCK)
+    ));
 
     private static BlockBehaviour.Properties buttonProperties() {
         return BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY);
+    }
+
+    private static boolean never(BlockState state, BlockGetter getter, BlockPos pos) {
+        return false;
     }
 }

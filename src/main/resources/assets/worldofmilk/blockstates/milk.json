@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "worldofmilk:block/milk_height2"
+    },
+    "layers=2": {
+      "model": "worldofmilk:block/milk_height4"
+    },
+    "layers=3": {
+      "model": "worldofmilk:block/milk_height6"
+    },
+    "layers=4": {
+      "model": "worldofmilk:block/milk_height8"
+    },
+    "layers=5": {
+      "model": "worldofmilk:block/milk_height10"
+    },
+    "layers=6": {
+      "model": "worldofmilk:block/milk_height12"
+    },
+    "layers=7": {
+      "model": "worldofmilk:block/milk_height14"
+    },
+    "layers=8": {
+      "model": "worldofmilk:block/milk_block"
+    }
+  }
+}
