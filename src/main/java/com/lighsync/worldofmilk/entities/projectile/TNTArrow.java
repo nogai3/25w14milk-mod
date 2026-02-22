@@ -10,6 +10,7 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.HitResult;
 
 public class TNTArrow extends AbstractArrow {
     private short fuse;
@@ -28,13 +29,26 @@ public class TNTArrow extends AbstractArrow {
 
     @Override
     protected void onHitEntity(EntityHitResult hitResult) {
-        super.onHit(hitResult);
-        PrimedTnt tnt = new PrimedTnt(EntityType.TNT, this.level());
-        tnt.setPos(this.getX(), this.getY(), this.getZ());
-        tnt.setFuse(this.fuse);
-        this.level().addFreshEntity(tnt);
+        if (!this.level().isClientSide) {
+            spawnTnt();
+            this.discard();
+        }
+    }
 
-        this.discard();
+    @Override
+    protected void onHit(HitResult hitResult) {
+        if (!this.level().isClientSide) {
+            spawnTnt();
+            this.discard();
+        }
+    }
+
+    private void spawnTnt() {
+        Level level = this.level();
+
+        PrimedTnt tnt = new PrimedTnt(level, this.getX(), this.getY(), this.getZ(), this.getOwner() instanceof LivingEntity le ? le : null);
+        tnt.setFuse(this.fuse);
+        level.addFreshEntity(tnt);
     }
 
     @Override

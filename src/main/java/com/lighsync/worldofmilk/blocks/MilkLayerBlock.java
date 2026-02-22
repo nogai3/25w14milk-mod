@@ -117,11 +117,12 @@ public class MilkLayerBlock extends Block {
     @Override
     public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
         int i = state.getValue(LAYERS);
-        if (context.getItemInHand().is(this.asItem()) || i >= 8) {
-            return i == 1;
-        } else {
-            return context.replacingClickedOnBlock() ? context.getClickedFace() == Direction.UP : true;
+        if (context.getItemInHand().is(this.asItem()) && i < 8) {
+            return context.replacingClickedOnBlock()
+                    ? context.getClickedFace() == Direction.UP
+                    : true;
         }
+        return i == 1;
     }
 
     @Nullable

@@ -1,12 +1,13 @@
 package com.lighsync.worldofmilk.registries;
 
 import com.lighsync.worldofmilk.Worldofmilk;
-import com.lighsync.worldofmilk.items.BreadSwordItem;
-import com.lighsync.worldofmilk.items.EnderPearlArrowItem;
-import com.lighsync.worldofmilk.items.Foods;
-import com.lighsync.worldofmilk.items.TNTArrowItem;
+import com.lighsync.worldofmilk.items.*;
 import com.lighsync.worldofmilk.items.utils.ArmorMaterials;
 import com.lighsync.worldofmilk.items.utils.Tiers;
+import net.minecraft.ChatFormatting;
+import net.minecraft.Util;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -43,7 +44,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> ICE_CREAM_WITH_WAFFLE_PLOMBIRE = ITEMS.register("ice_cream_with_waffle_plombire", () -> new Item(new Item.Properties().food(Foods.ICE_CREAM_WITH_WAFFLE_PLOMBIRE)));
 
     public static final RegistryObject<Item> PRESSED_BREAD = ITEMS.register("pressed_bread", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PRESSED_BREAD_UPGRADE = ITEMS.register("pressed_bread_upgrade", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PRESSED_BREAD_UPGRADE = ITEMS.register("pressed_bread_upgrade", () -> new PressedBreadUpgradeItem());
 
     public static final RegistryObject<Item> BREAD_SWORD = ITEMS.register("bread_sword", () -> new BreadSwordItem(Tiers.PRESSED_BREAD, new Item.Properties().fireResistant().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> BREAD_PICKAXE = ITEMS.register("bread_pickaxe", () -> new PickaxeItem(Tiers.PRESSED_BREAD, 1, -2.8f, new Item.Properties().fireResistant().rarity(Rarity.EPIC)));

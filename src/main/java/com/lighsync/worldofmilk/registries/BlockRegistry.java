@@ -1,10 +1,12 @@
 package com.lighsync.worldofmilk.registries;
 
 import com.lighsync.worldofmilk.Worldofmilk;
+import com.lighsync.worldofmilk.blocks.FridgeBlock;
 import com.lighsync.worldofmilk.blocks.JebBlock;
 import com.lighsync.worldofmilk.blocks.MilkLayerBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -165,6 +167,8 @@ public class BlockRegistry {
                             .isRedstoneConductor(BlockRegistry::never)
                             .pushReaction(PushReaction.BLOCK)
     ));
+
+    public static final RegistryObject<Block> FRIDGE_BLOCK = BLOCKS.register("fridge", () -> new FridgeBlock(new BlockBehaviour.Properties().copy(Blocks.FURNACE)));
 
     private static BlockBehaviour.Properties buttonProperties() {
         return BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY);

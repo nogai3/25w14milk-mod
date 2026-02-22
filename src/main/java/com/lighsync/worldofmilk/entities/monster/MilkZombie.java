@@ -49,15 +49,12 @@ public class MilkZombie extends Zombie {
         this(EntityRegistry.MILK_ZOMBIE.get(), level);
     }
 
-    /*public static AttributeSupplier.Builder createAttributes() {
-        return MilkZombie.createAttributes()
+    public static AttributeSupplier.Builder createAttributes() {
+        return Zombie.createAttributes()
                 .add(Attributes.FOLLOW_RANGE, 35.0D)
                 .add(Attributes.MOVEMENT_SPEED, 0.23D)
                 .add(Attributes.ATTACK_DAMAGE, 3.0D)
                 .add(Attributes.ATTACK_DAMAGE, 2.0D);
-    }*/
-    public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, (double)0.23F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR, 2.0D).add(Attributes.SPAWN_REINFORCEMENTS_CHANCE);
     }
 
     @Override

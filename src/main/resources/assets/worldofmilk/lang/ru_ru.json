@@ -91,6 +91,7 @@
   "item.worldofmilk.liquid_milk_bucket": "Ведро с 'жидким' молоком",
   "item.worldofmilk.milk_zombie_spawn_egg": "Яйцо призыва молочного зомби",
   "item.worldofmilk.ender_pearl_arrow": "Стрела с эндер-жемчугом",
+  "item.worldofmilk.tnt_arrow": "Стрела с динамитом",
   "item.worldofmilk.ice_cream_ball": "Шарик мороженного",
   "item.worldofmilk.ice_cream": "Мороженное",
   "item.worldofmilk.ice_cream_with_waffle_plombire": "Пломбир с вафлей",
@@ -101,6 +102,12 @@
   "gui.recipebook.toogleRecipes.fridgeble": "Рецепты для холодильника",
 
   "container.creative.worldofmilk": "Обновление молочка",
+
+  "upgrade.worldofmilk.pressed_bread_upgrade": "Хлебное улучшение",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.applies_to": "Незеритовому снаряжению",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.ingredients": "Спрессованный хлеб",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.base_slot_description": "Поместите незеритовый доспех, инструмент или оружие",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.additions_slot_description": "Поместите спресованный хлеб",
 
   "genai.version": "LighSync Gemini | Версия 1.2 | (C) LighSync Games. 2023-2025. Все права защищены!",
   "genai.encrypt.error": "Ошибка шифрования: ",

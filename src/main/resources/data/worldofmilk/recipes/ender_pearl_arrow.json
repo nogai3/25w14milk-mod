@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:ender_pearl"
+    },
+    "X": {
+      "item": "minecraft:spectral_arrow"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "result": {
+    "count": 2,
+    "item": "worldofmilk:ender_pearl_arrow"
+  },
+  "show_notification": true
+}

@@ -46,67 +46,9 @@ public class EnderPearlArrow extends AbstractArrow {
 
     @Override
     protected void onHit(HitResult hitResult) {
-        super.onHit(hitResult);
-
-        for (int i = 0; i < 32; i++) {
-            this.level().addParticle(
-                    ParticleTypes.PORTAL,
-                    this.getX(),
-                    this.getY() + this.random.nextDouble() * 2.0,
-                    this.getZ(),
-                    this.random.nextGaussian(),
-                    0.0,
-                    this.random.nextGaussian()
-            );
+        if (!this.level().isClientSide) {
+            teleportOwner();
         }
-
-        if (!(this.level() instanceof ServerLevel serverLevel) || this.isRemoved()) {
-            return;
-        }
-
-        Entity owner = this.getOwner();
-        if (owner == null || !isAllowedToTeleportOwner(owner, serverLevel)) {
-            this.discard();
-            return;
-        }
-
-        Vec3 tpPos = this.position();
-
-        if (owner instanceof ServerPlayer player) {
-            if (!player.connection.isAcceptingMessages()) {
-                this.discard();
-                return;
-            }
-
-            if (this.random.nextFloat() < 0.05F && serverLevel.getGameRules().getBoolean(GameRules.RULE_DOMOBSPAWNING)) {
-                Endermite endermite = EntityType.ENDERMITE.create(serverLevel);
-                if (endermite != null) {
-                    endermite.moveTo(owner.getX(), owner.getY(), owner.getZ(), owner.getYRot(), owner.getXRot());
-                    serverLevel.addFreshEntity(endermite);
-                }
-            }
-
-            if (this.isOnPortalCooldown()) {
-                owner.setPortalCooldown();
-            }
-
-            player.teleportTo(serverLevel, tpPos.x, tpPos.y, tpPos.z, player.getYRot(), player.getXRot());
-            player.fallDistance = 0.0F;
-
-            player.hurt(player.damageSources().magic(), 5);
-
-            playSound(serverLevel, tpPos);
-            this.discard();
-            return;
-        }
-
-        if (this.isOnPortalCooldown()) {
-            owner.setPortalCooldown();
-        }
-
-        owner.teleportTo(tpPos.x, tpPos.y, tpPos.z);
-        owner.fallDistance = 0.0F;
-        playSound(serverLevel, tpPos);
         this.discard();
     }
 
@@ -131,17 +73,44 @@ public class EnderPearlArrow extends AbstractArrow {
         super.tick();
     }
 
-    private void playSound(ServerLevel level, Vec3 pos) {
-        level.playSound(null, pos.x, pos.y, pos.z, SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
-    }
-
-    /*@Override
-    protected void onInsideBlock(BlockState state) {
-        super.onInsideBlock(state);
-        if (state.is(Blocks.END_GATEWAY) && this.getOwner() instanceof ServerPlayer player) {
-            player.onInsideBlock(state)
+    private void teleportOwner() {
+        for (int i = 0; i < 32; i++) {
+            this.level().addParticle(
+                    ParticleTypes.PORTAL,
+                    this.getX(),
+                    this.getY() + this.random.nextDouble() * 2.0,
+                    this.getZ(),
+                    this.random.nextGaussian(),
+                    0.0,
+                    this.random.nextGaussian()
+            );
         }
-    }*/
+
+        if (!((this.level()) instanceof ServerLevel serverLevel)) return;
+
+        Entity owner = this.getOwner();
+        if (owner == null || !isAllowedToTeleportOwner(owner, serverLevel)) return;
+
+        Vec3 tpPos = this.position();
+
+        if (owner instanceof ServerPlayer player) {
+            if (!player.connection.isAcceptingMessages()) return;
+
+            if (this.isOnPortalCooldown()) owner.setPortalCooldown();
+
+            player.teleportTo(serverLevel, tpPos.x, tpPos.y, tpPos.z, player.getYRot(), player.getXRot());
+            player.fallDistance = 0.0F;
+            player.hurt(player.damageSources().magic(), 5.0F);
+
+            serverLevel.playSound(null, tpPos.x, tpPos.y, tpPos.z, SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
+            return;
+        }
+
+        owner.teleportTo(tpPos.x, tpPos.y, tpPos.z);
+        owner.fallDistance = 0.0F;
+
+        serverLevel.playSound(null, tpPos.x, tpPos.y, tpPos.z, SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
+    }
 
     @Override
     protected void doPostHurtEffects(LivingEntity entity) {

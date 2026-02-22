@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+        "#": {
+            "item": "worldofmilk:milk_block"
+        }
+    },
+    "pattern": [
+        "#"
+    ],
+    "result": {
+        "count": 4,
+        "item": "worldofmilk:milk_layer_block"
+    },
+    "show_notification": true
+}

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": [
+		"food", "misc"
+	],
+    "key": {
+        "#": {
+            "item": "worldofmilk:pressed_bread"
+        }
+    },
+    "pattern": [
+        "#"
+    ],
+    "result": {
+        "count": 9,
+        "item": "minecraft:bread"
+    },
+    "show_notification": true
+}

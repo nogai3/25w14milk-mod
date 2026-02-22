@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+        "#": {
+            "item": "worldofmilk:dense_milk_block"
+        }
+    },
+    "pattern": [
+        "##",
+        "##",
+        "##"
+    ],
+    "result": {
+        "count": 3,
+        "item": "worldofmilk:dense_milk_door"
+    },
+    "show_notification": true
+}
