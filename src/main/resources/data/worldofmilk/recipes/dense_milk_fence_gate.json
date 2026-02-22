@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+        "#": {
+            "item": "worldofmilk:dense_milk_block"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+    "pattern": [
+        "S#S",
+        "S#S"
+    ],
+    "result": {
+        "count": 1,
+        "item": "worldofmilk:dense_milk_fence_gate"
+    },
+    "show_notification": true
+}

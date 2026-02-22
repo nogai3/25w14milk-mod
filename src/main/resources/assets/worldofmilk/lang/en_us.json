@@ -90,6 +90,7 @@
   "item.worldofmilk.liquid_milk_bucket": "Bucket of \"Liquid\" Milk",
   "item.worldofmilk.milk_zombie_spawn_egg": "Milk Zombie Spawn Egg",
   "item.worldofmilk.ender_pearl_arrow": "Ender Pearl Arrow",
+  "item.worldofmilk.tnt_arrow": "TNT Arrow",
   "item.worldofmilk.ice_cream_ball": "Ice Cream Scoop",
   "item.worldofmilk.ice_cream": "Ice Cream",
   "item.worldofmilk.ice_cream_with_waffle_plombire": "Plombir with Waffle",
@@ -100,6 +101,12 @@
   "gui.recipebook.toogleRecipes.fridgeble": "Fridge Recipes",
 
   "container.creative.worldofmilk": "World of Milk",
+
+  "upgrade.worldofmilk.pressed_bread_upgrade": "Pressed Bread Upgrade",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.applies_to": "Netherite Equipment",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.ingredients": "Pressed Bread",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.base_slot_description": "Add netherite armor, weapon or tool",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.additions_slot_description": "Add Pressed Bread",
 
   "genai.version": "LighSync Gemini | Version 1.2 | (C) LighSync Games. 2023-2025. All rights reserved!",
   "genai.encrypt.error": "Encryption error: ",

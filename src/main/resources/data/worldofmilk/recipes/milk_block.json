@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "food",
+    "key": {
+        "#": {
+            "item": "minecraft:milk_bucket"
+        }
+    },
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "result": {
+        "count": 2,
+        "item": "worldofmilk:milk_block"
+    },
+    "show_notification": true
+}

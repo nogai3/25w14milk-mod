@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+      "#": {
+        "item": "worldofmilk:milk_block"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "pattern": [
+      " I ",
+      "I#I",
+      " I "
+    ],
+    "result": {
+      "count": 2,
+      "item": "worldofmilk:dense_milk_block"
+    },
+    "show_notification": true
+}

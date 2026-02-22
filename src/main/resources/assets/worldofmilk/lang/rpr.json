@@ -91,6 +91,7 @@
   "item.worldofmilk.liquid_milk_bucket": "Ведро съ «молокомъ жидкимъ»",
   "item.worldofmilk.milk_zombie_spawn_egg": "Яйцо призыва зомбіевъ молочныхъ",
   "item.worldofmilk.ender_pearl_arrow": "Стрѣла съ эндер-жемчугомъ",
+  "item.worldofmilk.tnt_arrow": "Стрѣла съ динамитомъ (бабахъ!)",
   "item.worldofmilk.ice_cream_ball": "Шарикъ мороженаго",
   "item.worldofmilk.ice_cream": "Мороженое (хладная радость)",
   "item.worldofmilk.ice_cream_with_waffle_plombire": "Пломбиръ съ вафлей",
@@ -101,6 +102,12 @@
   "gui.recipebook.toogleRecipes.fridgeble": "Рецепты для холодильника",
 
   "container.creative.worldofmilk": "Обновленіе молочка (сладчайшее)",
+
+  "upgrade.worldofmilk.pressed_bread_upgrade": "Улучшеніе хлѣбное преславное (кирпичъ силы)",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.applies_to": "Къ снаряженію незеритовѣйшему (дабы стало оно хлѣбнымъ и могучимъ)",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.ingredients": "Хлѣбъ спрессованный (твёрдъ, яко камень, но вкусенъ)",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.base_slot_description": "Помѣстите доспѣхъ, инструментъ или оружіе незеритовѣйшее (не дрогните рукою)",
+  "item.worldofmilk.smithing_template.pressed_bread_upgrade.additions_slot_description": "Возложите хлѣбъ спрессованный (и произнесите: «да будетъ крошка!»)",
 
   "genai.version": "LighSync Gemini | Версія 1.2 | (C) LighSync Games. 2023-2025. Всѣ права защищены!",
   "genai.encrypt.error": "Ошибка шифрованія: ",

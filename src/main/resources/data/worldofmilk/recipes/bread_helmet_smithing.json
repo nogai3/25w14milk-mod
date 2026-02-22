@@ -1,0 +1,15 @@
+{
+   "type": "minecraft:smithing_transform",
+   "addition": {
+      "item": "worldofmilk:pressed_bread"
+   },
+   "base": {
+      "item": "minecraft:netherite_helmet"
+   },
+   "result": {
+      "item": "worldofmilk:bread_helmet"
+   },
+   "template": {
+      "item": "worldofmilk:pressed_bread_upgrade"
+   }
+}

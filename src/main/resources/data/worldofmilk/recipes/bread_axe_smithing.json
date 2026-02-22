@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "worldofmilk:pressed_bread"
+  },
+  "base": {
+    "item": "minecraft:netherite_axe"
+  },
+  "result": {
+    "item": "worldofmilk:bread_axe"
+  },
+  "template": {
+    "item": "worldofmilk:pressed_bread_upgrade"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:tnt"
+    },
+    "X": {
+      "item": "minecraft:spectral_arrow"
+    }
+  },
+  "pattern": [
+    "#X#"
+  ],
+  "result": {
+    "count": 2,
+    "item": "worldofmilk:tnt_arrow"
+  },
+  "show_notification": true
+}

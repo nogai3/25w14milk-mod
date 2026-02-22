@@ -1,5 +1,6 @@
 package com.lighsync.worldofmilk.items.utils;
 
+import com.lighsync.worldofmilk.Worldofmilk;
 import com.lighsync.worldofmilk.registries.ItemRegistry;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
@@ -64,8 +65,8 @@ public enum ArmorMaterials implements StringRepresentable, ArmorMaterial {
     public int getEnchantmentValue() { return this.enchantmentValue; }
     public SoundEvent getEquipSound() { return this.sound; }
     public Ingredient getRepairIngredient() { return this.repairIngredient.get(); }
-    public String getName() { return this.name; }
+    public String getName() { return "worldofmilk:" + this.name; }
     public float getToughness() { return this.toughness; }
     public float getKnockbackResistance() { return this.knockbackResistance; }
-    public String getSerializedName() { return this.name; }
+    public String getSerializedName() { return "worldofmilk:" + this.name; }
 }

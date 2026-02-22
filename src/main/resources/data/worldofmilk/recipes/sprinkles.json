@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "food",
+    "key": {
+        "#": {
+            "item": "minecraft:cocoa_beans"
+        },
+        "R": {
+            "item": "minecraft:red_dye"
+        },
+        "B": {
+            "item": "minecraft:blue_dye"
+        },
+        "Y": {
+            "item": "minecraft:yellow_dye"
+        }
+    },
+    "pattern": [
+        "#R",
+        "BY"
+    ],
+    "result": {
+        "count": 4,
+        "item": "worldofmilk:sprinkles"
+    },
+    "show_notification": true
+}

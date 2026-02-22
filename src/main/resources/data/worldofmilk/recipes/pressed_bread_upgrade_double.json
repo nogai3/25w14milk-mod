@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"#": {
+			"item": "worldofmilk:pressed_bread_upgrade"
+		},
+        "P": {
+			"item": "worldofmilk:pressed_bread"
+		},
+		"D": {
+			"item": "minecraft:diamond"
+		}
+	},
+	"pattern": [
+		"D#D",
+		"DPD",
+		"DDD"
+	],
+	"result": {
+		"count": 2,
+		"item": "worldofmilk:pressed_bread_upgrade"
+	},
+	"show_notification": true
+}

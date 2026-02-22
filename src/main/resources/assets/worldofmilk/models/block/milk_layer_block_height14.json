@@ -1,7 +1,7 @@
 {
     "textures": {
-        "particle": "block/milk_layer_block",
-        "texture": "block/milk_layer_block"
+        "particle": "worldofmilk:block/milk_layer_block",
+        "texture": "worldofmilk:block/milk_layer_block"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],

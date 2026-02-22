@@ -1,9 +1,6 @@
 package com.lighsync.worldofmilk;
 
-import com.lighsync.worldofmilk.registries.BlockRegistry;
-import com.lighsync.worldofmilk.registries.EntityRegistry;
-import com.lighsync.worldofmilk.registries.ItemRegistry;
-import com.lighsync.worldofmilk.registries.TabRegistry;
+import com.lighsync.worldofmilk.registries.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -45,6 +42,9 @@ public class Worldofmilk {
         modEventBus.addListener(this::commonSetup);
 
         BlockRegistry.BLOCKS.register(modEventBus);
+        BlockEntityRegistry.BLOCKS_ENTITIES.register(modEventBus);
+        RecipeRegistry.RECIPE_TYPES.register(modEventBus);
+        RecipeSerializerRegistry.SERIALIZERS.register(modEventBus);
         ItemRegistry.ITEMS.register(modEventBus);
         EntityRegistry.ENTITIES.register(modEventBus);
         TabRegistry.CREATIVE_MODE_TABS.register(modEventBus);

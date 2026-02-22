@@ -24,10 +24,7 @@ import javax.annotation.Nullable;
 public class JebBlock extends Block {
     private static final String CRYPTED_API_KEY = "";
     private boolean canUseBlock = true;
-    // private static final JebBlockMessageManager MESSAGE_MANAGER = JebBlockMessageManager.INSTANCE;
-    private static final String[] MESSAGES = {
-
-    };
+    private static final JebBlockMessageManager MESSAGE_MANAGER = JebBlockMessageManager.INSTANCE;
     private static final SoundEvent[] SOUND_EVENTS = {};
 
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
@@ -38,23 +35,26 @@ public class JebBlock extends Block {
     }
 
     private void useBlock(Level level, @Nullable Player player, BlockPos pos) {
-        RandomSource random = level.getRandom();
-        String message = MESSAGES[random.nextInt(MESSAGES.length+1)];
-        if (player != null && !level.isClientSide) {
-            level.getServer().sendSystemMessage(Component.literal(message));
-        } else {
-            player.sendSystemMessage(Component.literal(message));
+        String message = MESSAGE_MANAGER.getRandomMessage();
+        Component text = Component.literal(message);
+
+        if (!level.isClientSide) {
+            if (player != null) {
+                player.sendSystemMessage(text);
+            } else if (level.getServer() != null) {
+                level.getServer().getPlayerList().getPlayers()
+                        .forEach(p -> p.sendSystemMessage(text));
+            }
         }
 
-        int soundId = random.nextInt((SOUND_EVENTS.length - 1) + 1) + 1;
-        playCustomSound(level, pos, soundId);
+        if (SOUND_EVENTS.length > 0) {
+            int index = level.getRandom().nextInt(SOUND_EVENTS.length);
+            playCustomSound(level, pos, SOUND_EVENTS[index]);
+        }
     }
 
-    private void playCustomSound(Level level, BlockPos pos, int soundId) {
-        if (soundId >= 1 && soundId <= SOUND_EVENTS.length) {
-            SoundEvent event = SOUND_EVENTS[soundId - 1];
-            level.playSound(null, pos, event, SoundSource.BLOCKS, 1.0f, 1.0f);
-        }
+    private void playCustomSound(Level level, BlockPos pos, SoundEvent event) {
+        level.playSound(null, pos, event, SoundSource.BLOCKS, 1.0f, 1.0f);
     }
 
     @Override

@@ -1,10 +1,10 @@
 package com.lighsync.worldofmilk.registries;
 
 import com.lighsync.worldofmilk.Worldofmilk;
-import com.lighsync.worldofmilk.blocks.JebBlock;
-import com.lighsync.worldofmilk.blocks.MilkLayerBlock;
+import com.lighsync.worldofmilk.blocks.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,8 +19,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Worldofmilk.MODID);
-    public static final BlockSetType MILK_SET_TYPE = BlockSetType.register(new BlockSetType("milk", true, SoundType.COPPER, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF, SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF, SoundEvents.STONE_BUTTON_CLICK_ON));
-    public static final WoodType MILK_WOOD_TYPE = WoodType.register(new WoodType("milk", MILK_SET_TYPE));
+    public static final BlockSetType MILK_SET_TYPE = BlockSetType.register(new BlockSetType(Worldofmilk.MODID + ":dense_milk", true, SoundType.COPPER, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF, SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF, SoundEvents.STONE_BUTTON_CLICK_ON));
+    public static final WoodType MILK_WOOD_TYPE = WoodType.register(new WoodType(Worldofmilk.MODID + ":dense_milk", MILK_SET_TYPE));
 
     public static final RegistryObject<Block> MILK_BLOCK = BLOCKS.register("milk_block",
             () -> new FallingBlock(
@@ -114,6 +114,30 @@ public class BlockRegistry {
                 MILK_WOOD_TYPE
     ));
 
+    public static final RegistryObject<Block> DENSE_MILK_SIGN = BLOCKS.register("dense_milk_sign",
+            () -> new DenseMilkStandingSign (
+                    BlockBehaviour.Properties.copy(Blocks.OAK_SIGN),
+                    MILK_WOOD_TYPE
+    ));
+
+    public static final RegistryObject<Block> DENSE_MILK_WALL_SIGN = BLOCKS.register("dense_milk_wall_sign",
+            () -> new DenseMilkWallSign(
+                    BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN),
+                    MILK_WOOD_TYPE
+    ));
+
+    public static final RegistryObject<Block> DENSE_MILK_HANGING_SIGN = BLOCKS.register("dense_milk_hanging_sign",
+            () -> new DenseMilkHangingSign(
+                    BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN),
+                    MILK_WOOD_TYPE
+    ));
+
+    public static final RegistryObject<Block> DENSE_MILK_WALL_HANGING_SIGN = BLOCKS.register("dense_milk_wall_hanging_sign",
+            () -> new DenseMilkWallHangingSign(
+                    BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN),
+                    MILK_WOOD_TYPE
+    ));
+
     public static final RegistryObject<Block> DENSE_MILK_PRESSURE_PLATE = BLOCKS.register("dense_milk_pressure_plate",
             () -> new PressurePlateBlock(
                     PressurePlateBlock.Sensitivity.MOBS,
@@ -164,6 +188,11 @@ public class BlockRegistry {
                             .pushReaction(PushReaction.DESTROY)
                             .isRedstoneConductor(BlockRegistry::never)
                             .pushReaction(PushReaction.BLOCK)
+    ));
+
+    public static final RegistryObject<Block> FRIDGE_BLOCK = BLOCKS.register("fridge",
+            () -> new FridgeBlock(
+                    BlockBehaviour.Properties.copy(Blocks.FURNACE)
     ));
 
     private static BlockBehaviour.Properties buttonProperties() {
