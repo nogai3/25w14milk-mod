@@ -16,7 +16,7 @@
     ],
     "result": {
         "count": 3,
-        "item": "minecraft:dense_milk_sign"
+        "item": "worldofmilk:dense_milk_sign"
     },
     "show_notification": true
 }

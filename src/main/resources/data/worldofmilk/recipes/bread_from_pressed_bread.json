@@ -1,8 +1,6 @@
 {
     "type": "minecraft:crafting_shaped",
-    "category": [
-		"food", "misc"
-	],
+    "category": "food",
     "key": {
         "#": {
             "item": "worldofmilk:pressed_bread"

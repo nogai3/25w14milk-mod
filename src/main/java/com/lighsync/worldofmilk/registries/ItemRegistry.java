@@ -17,7 +17,7 @@ public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Worldofmilk.MODID);
 
     public static final RegistryObject<Item> MILK_BLOCK = ITEMS.register("milk_block", () -> new BlockItem(BlockRegistry.MILK_BLOCK.get(), new Item.Properties().food(Foods.MILK_BLOCK)));
-    public static final RegistryObject<Item> MILK_LAYER_BLOCk = ITEMS.register("milk_layer_block", () -> new BlockItem(BlockRegistry.MILK_LAYER_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> MILK_LAYER_BLOCK = ITEMS.register("milk_layer_block", () -> new BlockItem(BlockRegistry.MILK_LAYER_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item> DENSE_MILK_BLOCK = ITEMS.register("dense_milk_block", () -> new BlockItem(BlockRegistry.DENSE_MILK_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item> DENSE_MILK_DOOR = ITEMS.register("dense_milk_door", () -> new BlockItem(BlockRegistry.DENSE_MILK_DOOR.get(), new Item.Properties()));
     public static final RegistryObject<Item> DENSE_MILK_TRAPDOOR = ITEMS.register("dense_milk_trapdoor", () -> new BlockItem(BlockRegistry.DENSE_MILK_TRAPDOOR.get(), new Item.Properties()));
@@ -26,6 +26,8 @@ public class ItemRegistry {
     public static final RegistryObject<Item> DENSE_MILK_STAIRS = ITEMS.register("dense_milk_stairs", () -> new BlockItem(BlockRegistry.DENSE_MILK_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<Item> DENSE_MILK_FENCE = ITEMS.register("dense_milk_fence", () -> new BlockItem(BlockRegistry.DENSE_MILK_FENCE.get(), new Item.Properties()));
     public static final RegistryObject<Item> DENSE_MILK_FENCE_GATE = ITEMS.register("dense_milk_fence_gate", () -> new BlockItem(BlockRegistry.DENSE_MILK_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DENSE_MILK_SIGN = ITEMS.register("dense_milk_sign", () -> new SignItem(new Item.Properties().stacksTo(16), BlockRegistry.DENSE_MILK_SIGN.get(), BlockRegistry.DENSE_MILK_WALL_SIGN.get()));
+    public static final RegistryObject<Item> DENSE_MILK_HANGING_SIGN = ITEMS.register("dense_milk_hanging_sign", () -> new HangingSignItem(BlockRegistry.DENSE_MILK_HANGING_SIGN.get(), BlockRegistry.DENSE_MILK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> DENSE_MILK_PRESSURE_PLATE = ITEMS.register("dense_milk_pressure_plate", () -> new BlockItem(BlockRegistry.DENSE_MILK_PRESSURE_PLATE.get(), new Item.Properties()));
     public static final RegistryObject<Item> CARVED_DENSE_MILK_BLOCK = ITEMS.register("carved_dense_milk_block", () -> new BlockItem(BlockRegistry.CARVED_DENSE_MILK_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item> CARVED_DENSE_MILK_SLAB = ITEMS.register("carved_dense_milk_slab", () -> new BlockItem(BlockRegistry.CARVED_DENSE_MILK_SLAB.get(), new Item.Properties()));

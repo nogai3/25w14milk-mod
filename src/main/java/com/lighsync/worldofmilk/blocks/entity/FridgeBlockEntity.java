@@ -7,10 +7,12 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.FridgeMenu;
+// net.minecraft.world.inventory.FridgeMenu;
+import net.minecraft.world.inventory.FurnaceMenu;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -27,7 +29,8 @@ public class FridgeBlockEntity extends AbstractFurnaceBlockEntity {
     );
 
     public FridgeBlockEntity(BlockPos pos, BlockState state) {
-        super(BlockEntityRegistry.FRIDGE_BLOCK.get(), pos, state, RecipeRegistry.FRIDGE.get());
+        // super(BlockEntityRegistry.FRIDGE_BLOCK.get(), pos, state, RecipeRegistry.FRIDGE.get());
+        super(BlockEntityRegistry.FRIDGE_BLOCK.get(), pos, state, RecipeType.BLASTING);
     }
 
     @Override
@@ -54,6 +57,6 @@ public class FridgeBlockEntity extends AbstractFurnaceBlockEntity {
 
     @Override
     protected AbstractContainerMenu createMenu(int containerId, Inventory playerInventory) {
-        return new FridgeMenu(containerId, playerInventory, this, this.dataAccess);
+        return new FurnaceMenu(containerId, playerInventory, this, this.dataAccess);
     }
 }

@@ -1,4 +1,4 @@
-package com.lighsync.worldofmilk.blocks.entity.recipe;
+/*package com.lighsync.worldofmilk.blocks.entity.recipe;
 
 import com.lighsync.worldofmilk.Worldofmilk;
 import com.lighsync.worldofmilk.registries.BlockRegistry;
@@ -20,20 +20,20 @@ public class FridgeRecipe extends AbstractCookingRecipe {
         );
     }
 
-    @Override
-    public RecipeSerializer<?> getSerializer() {
-        return RecipeSerializerRegistry.FRIDGE.get();
-    }
+    // @Override
+    // public RecipeSerializer<?> getSerializer() {
+    //    return RecipeSerializerRegistry.FRIDGE.get();
+    // }
 
-    @Override
-    public RecipeType<?> getType() {
-        return RecipeRegistry.FRIDGE.get();
-    }
+    // @Override
+    // public RecipeType<?> getType() {
+    //    return RecipeRegistry.FRIDGE.get();
+    // }
 
-    public static class Serializer extends AbstractCookingRecipe.Serializer<FridgeRecipe> {
-
-        public Serializer() {
-            super(FridgeRecipe::new, 200);
-        }
-    }
-}
+    // public static class Serializer extends AbstractCookingRecipe.Serializer<FridgeRecipe> {
+    //
+    //     public Serializer() {
+    //        super(FridgeRecipe::new, 200);
+    //    }
+    // }
+}*/
