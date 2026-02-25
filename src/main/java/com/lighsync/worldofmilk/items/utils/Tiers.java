@@ -1,14 +1,10 @@
 package com.lighsync.worldofmilk.items.utils;
 
 import com.lighsync.worldofmilk.registries.ItemRegistry;
-import net.minecraft.tags.TagKey;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.ForgeHooks;
 
-import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 public enum Tiers implements Tier {

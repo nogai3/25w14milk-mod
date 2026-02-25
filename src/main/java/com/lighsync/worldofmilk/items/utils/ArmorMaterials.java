@@ -1,6 +1,5 @@
 package com.lighsync.worldofmilk.items.utils;
 
-import com.lighsync.worldofmilk.Worldofmilk;
 import com.lighsync.worldofmilk.registries.ItemRegistry;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;

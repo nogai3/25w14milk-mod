@@ -1,7 +1,6 @@
 package com.lighsync.worldofmilk.blocks;
 
 import com.lighsync.worldofmilk.blocks.entity.FridgeBlockEntity;
-import com.mojang.serialization.MapCodec;
 import com.lighsync.worldofmilk.registries.BlockEntityRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;

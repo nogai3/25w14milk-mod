@@ -48,12 +48,13 @@ public class Worldofmilk {
         ItemRegistry.ITEMS.register(modEventBus);
         EntityRegistry.ENTITIES.register(modEventBus);
         TabRegistry.CREATIVE_MODE_TABS.register(modEventBus);
+        PaintingRegistry.PAINTING_VARIANTS.register(modEventBus);
+        CatVariantRegistry.CAT_VARIANTS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {}
-
     public static Logger getLogger() {
         return LOGGER;
     }

@@ -4,7 +4,6 @@ import com.lighsync.worldofmilk.Worldofmilk;
 import com.lighsync.worldofmilk.blocks.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;

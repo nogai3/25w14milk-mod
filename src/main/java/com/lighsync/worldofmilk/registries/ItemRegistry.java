@@ -4,10 +4,6 @@ import com.lighsync.worldofmilk.Worldofmilk;
 import com.lighsync.worldofmilk.items.*;
 import com.lighsync.worldofmilk.items.utils.ArmorMaterials;
 import com.lighsync.worldofmilk.items.utils.Tiers;
-import net.minecraft.ChatFormatting;
-import net.minecraft.Util;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,9 +11,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Worldofmilk.MODID);
-
+ 
     public static final RegistryObject<Item> MILK_BLOCK = ITEMS.register("milk_block", () -> new BlockItem(BlockRegistry.MILK_BLOCK.get(), new Item.Properties().food(Foods.MILK_BLOCK)));
-    public static final RegistryObject<Item> MILK_LAYER_BLOCK = ITEMS.register("milk_layer_block", () -> new BlockItem(BlockRegistry.MILK_LAYER_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> MILK_LAYER_BLOCK = ITEMS.register("milk_layer_block", () -> new BlockItem(BlockRegistry.MILK_LAYER_BLOCK.get(), new Item.Properties().food(Foods.MILK_BLOCK)));
     public static final RegistryObject<Item> DENSE_MILK_BLOCK = ITEMS.register("dense_milk_block", () -> new BlockItem(BlockRegistry.DENSE_MILK_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item> DENSE_MILK_DOOR = ITEMS.register("dense_milk_door", () -> new BlockItem(BlockRegistry.DENSE_MILK_DOOR.get(), new Item.Properties()));
     public static final RegistryObject<Item> DENSE_MILK_TRAPDOOR = ITEMS.register("dense_milk_trapdoor", () -> new BlockItem(BlockRegistry.DENSE_MILK_TRAPDOOR.get(), new Item.Properties()));

@@ -1,7 +1,6 @@
 package com.lighsync.worldofmilk.client.renderer;
 
 import com.lighsync.worldofmilk.Worldofmilk;
-import com.lighsync.worldofmilk.entities.monster.MilkZombie;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.ZombieRenderer;

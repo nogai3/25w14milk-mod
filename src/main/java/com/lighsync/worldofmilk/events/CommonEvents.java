@@ -7,17 +7,31 @@ import com.lighsync.worldofmilk.client.renderer.MilkZombieRenderer;
 import com.lighsync.worldofmilk.client.renderer.TNTArrowRenderer;
 import com.lighsync.worldofmilk.entities.monster.MilkZombie;
 import com.lighsync.worldofmilk.items.BreadSwordItem;
+import com.lighsync.worldofmilk.items.Foods;
 import com.lighsync.worldofmilk.registries.BlockEntityRegistry;
 import com.lighsync.worldofmilk.registries.BlockRegistry;
 import com.lighsync.worldofmilk.registries.EntityRegistry;
+import com.lighsync.worldofmilk.registries.ItemRegistry;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.animal.Cow;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.event.AddReloadListenerEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.event.entity.EntityStruckByLightningEvent;
+import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -61,6 +75,79 @@ public class CommonEvents {
 
             float bonus = BreadSwordItem.calcBonusFromFood(player);
             event.setAmount(event.getAmount() + bonus);
+        }
+
+        @SubscribeEvent
+        public static void onEntityUseItem(LivingEntityUseItemEvent.Finish event) {
+            if (!((event.getEntity()) instanceof Player player)) return;
+
+            ItemStack item = event.getItem();
+            if (item.is(Foods.MILK_FOOD)) {
+                player.removeAllEffects();
+            }
+        }
+
+        private static boolean isWearing(Player player, EquipmentSlot slot, Item item) {
+            ItemStack stack = player.getItemBySlot(slot);
+            return !stack.isEmpty() && stack.is(item);
+        }
+
+        private static boolean hasFullSet(Player player) {
+            return isWearing(player, EquipmentSlot.HEAD, ItemRegistry.BREAD_HELMET.get()) ||
+                    isWearing(player, EquipmentSlot.CHEST, ItemRegistry.BREAD_CHESTPLATE.get()) ||
+                    isWearing(player, EquipmentSlot.LEGS, ItemRegistry.BREAD_LEGGINGS.get()) ||
+                    isWearing(player, EquipmentSlot.FEET, ItemRegistry.BREAD_BOOTS.get());
+        }
+
+        @SubscribeEvent
+        public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+            if (event.phase != TickEvent.Phase.END) return;
+
+            Player player = event.player;
+            if (player.level().isClientSide) return;
+
+            if (hasFullSet(player) && player.getFoodData().getFoodLevel() < 6) {
+                player.addEffect(new MobEffectInstance(
+                        MobEffects.SATURATION,
+                        7,
+                        0,
+                        true, false, true
+                ));
+            }
+        }
+
+        @SubscribeEvent
+        public static void onStruck(EntityStruckByLightningEvent event) {
+            if (!(event.getEntity() instanceof Cow cow)) return;
+            if (cow.level().isClientSide) return;
+
+            ServerLevel level = (ServerLevel) cow.level();
+
+            Mob milkZombie = EntityRegistry.MILK_ZOMBIE.get().create(level);
+            if (milkZombie == null) return;
+
+            milkZombie.moveTo(cow.getX(), cow.getY(), cow.getZ(), cow.getYRot(), cow.getXRot());
+            if (cow.hasCustomName()) {
+                milkZombie.setCustomName(cow.getCustomName());
+                milkZombie.setCustomNameVisible(cow.isCustomNameVisible());
+            }
+            milkZombie.setPersistenceRequired();
+            cow.discard();
+            level.addFreshEntity(milkZombie);
+        }
+
+        @SubscribeEvent
+        public static void onLivingDrops(LivingDropsEvent event) {
+            if (!(event.getEntity() instanceof Player player)) return;
+
+            if (player.level().isClientSide) return;
+
+            String playerName = player.getGameProfile().getName();
+            switch (playerName) {
+                case "glackus", "wandarmo", "PLYTONI", "KAPITANKASTET" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(Items.MILK_BUCKET)));
+                case "jeb_", "Jeb_" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(ItemRegistry.JEB_BLOCK.get())));
+                // case "Dev" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(ItemRegistry.MILK_LAYER_BLOCK.get())));
+            }
         }
     }
 }
