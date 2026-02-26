@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "worldofmilk:carved_dense_milk_block"
+  },
+  "result": "worldofmilk:carved_dense_milk_slab"
+}

@@ -57,5 +57,7 @@ public class BreadSwordItem extends SwordItem {
         return food * 1.0F;
     }
 
-    private boolean canSmashAttack(Player player) { return player.getFoodData().getFoodLevel() >= (int) SMASH_ATTACK_THRESHOLD; }
+    private boolean canSmashAttack(Player player) {
+        return player.getFoodData().getFoodLevel() > (int) SMASH_ATTACK_THRESHOLD;
+    }
 }

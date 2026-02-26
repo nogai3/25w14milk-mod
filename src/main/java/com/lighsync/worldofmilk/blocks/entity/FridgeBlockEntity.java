@@ -1,6 +1,7 @@
 package com.lighsync.worldofmilk.blocks.entity;
 
 import com.lighsync.worldofmilk.Worldofmilk;
+import com.lighsync.worldofmilk.menu.FridgeMenu;
 import com.lighsync.worldofmilk.registries.BlockEntityRegistry;
 import com.lighsync.worldofmilk.registries.RecipeRegistry;
 import net.minecraft.core.BlockPos;
@@ -29,8 +30,7 @@ public class FridgeBlockEntity extends AbstractFurnaceBlockEntity {
     );
 
     public FridgeBlockEntity(BlockPos pos, BlockState state) {
-        // super(BlockEntityRegistry.FRIDGE_BLOCK.get(), pos, state, RecipeRegistry.FRIDGE.get());
-        super(BlockEntityRegistry.FRIDGE_BLOCK.get(), pos, state, RecipeType.BLASTING);
+        super(BlockEntityRegistry.FRIDGE_BLOCK.get(), pos, state, RecipeRegistry.FRIDGE_TYPE.get());
     }
 
     @Override
@@ -40,7 +40,7 @@ public class FridgeBlockEntity extends AbstractFurnaceBlockEntity {
 
     @Override
     protected int getBurnDuration(ItemStack fuelStack) {
-        return COLD_FUEL_VALUES.get(fuelStack.getItem());
+        return COLD_FUEL_VALUES.getOrDefault(fuelStack.getItem(), 0);
     }
 
     @Override
@@ -57,6 +57,6 @@ public class FridgeBlockEntity extends AbstractFurnaceBlockEntity {
 
     @Override
     protected AbstractContainerMenu createMenu(int containerId, Inventory playerInventory) {
-        return new FurnaceMenu(containerId, playerInventory, this, this.dataAccess);
+        return new FridgeMenu(containerId, playerInventory, this, this.dataAccess);
     }
 }

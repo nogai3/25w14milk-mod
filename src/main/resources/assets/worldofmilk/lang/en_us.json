@@ -72,12 +72,6 @@
   "painting.worldofmilk.plytoni.title": "PLYTONI",
   "painting.worldofmilk.wandarmo.author": "Zlata Ustimenko",
   "painting.worldofmilk.wandarmo.title": "wandarmo",
-  "painting.worldofmilk.glackus_irl.author": "Gleb Ustimenko",
-  "painting.worldofmilk.glackus_irl.title": "\"The Great glackus\"",
-  "painting.worldofmilk.plytoni_irl.author": "Platon Unterov",
-  "painting.worldofmilk.plytoni_irl.title": "The Man and the Bald Cat",
-  "painting.worldofmilk.kapitankastet_irl.author": "Konstantin Fadeev",
-  "painting.worldofmilk.kapitankastet_irl.title": "Absolute Despair",
   "painting.worldofmilk.gray_cat.author": "Gleb Ustimenko",
   "painting.worldofmilk.gray_cat.title": "Gray Cat",
   "painting.worldofmilk.filya_cat.author": "Gleb Ustimenko",
@@ -101,9 +95,9 @@
   "item.worldofmilk.ice_cream_with_waffle_plombire": "Plombir with Waffle",
   "item.worldofmilk.waffle": "Waffle",
 
-  "container.fridge": "Fridge",
+  "container.worldofmilk.fridge": "Fridge",
   "stat.worldofmilk.interact_with_fridge": "Interactions with Fridge",
-  "gui.recipebook.toogleRecipes.fridgeble": "Fridge Recipes",
+  "gui.recipebook.toogleRecipes.fridgeable": "Fridge Recipes",
 
   "container.creative.worldofmilk": "World of Milk",
 

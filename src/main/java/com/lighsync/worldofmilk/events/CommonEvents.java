@@ -2,16 +2,15 @@ package com.lighsync.worldofmilk.events;
 
 import com.lighsync.worldofmilk.Worldofmilk;
 import com.lighsync.worldofmilk.blocks.utils.JebBlockMessageManager;
+import com.lighsync.worldofmilk.client.gui.screen.FridgeScreen;
 import com.lighsync.worldofmilk.client.renderer.EnderPearlArrowRenderer;
 import com.lighsync.worldofmilk.client.renderer.MilkZombieRenderer;
 import com.lighsync.worldofmilk.client.renderer.TNTArrowRenderer;
 import com.lighsync.worldofmilk.entities.monster.MilkZombie;
 import com.lighsync.worldofmilk.items.BreadSwordItem;
 import com.lighsync.worldofmilk.items.Foods;
-import com.lighsync.worldofmilk.registries.BlockEntityRegistry;
-import com.lighsync.worldofmilk.registries.BlockRegistry;
-import com.lighsync.worldofmilk.registries.EntityRegistry;
-import com.lighsync.worldofmilk.registries.ItemRegistry;
+import com.lighsync.worldofmilk.registries.*;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
@@ -43,6 +42,7 @@ public class CommonEvents {
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             Sheets.addWoodType(BlockRegistry.MILK_WOOD_TYPE);
+            MenuScreens.register(MenuRegistry.FRIDGE_MENU.get(), FridgeScreen::new);
         });
     }
     @SubscribeEvent
@@ -106,7 +106,7 @@ public class CommonEvents {
             Player player = event.player;
             if (player.level().isClientSide) return;
 
-            if (hasFullSet(player) && player.getFoodData().getFoodLevel() < 6) {
+            if (hasFullSet(player) && player.getFoodData().getFoodLevel() < 5.5F) {
                 player.addEffect(new MobEffectInstance(
                         MobEffects.SATURATION,
                         7,

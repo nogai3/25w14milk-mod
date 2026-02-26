@@ -43,10 +43,11 @@ public class Worldofmilk {
 
         BlockRegistry.BLOCKS.register(modEventBus);
         BlockEntityRegistry.BLOCKS_ENTITIES.register(modEventBus);
-        RecipeRegistry.RECIPE_TYPES.register(modEventBus);
-        RecipeSerializerRegistry.SERIALIZERS.register(modEventBus);
+        RecipeRegistry.SERIALIZERS.register(modEventBus);
+        RecipeRegistry.TYPES.register(modEventBus);
         ItemRegistry.ITEMS.register(modEventBus);
         EntityRegistry.ENTITIES.register(modEventBus);
+        MenuRegistry.MENUS.register(modEventBus);
         TabRegistry.CREATIVE_MODE_TABS.register(modEventBus);
         PaintingRegistry.PAINTING_VARIANTS.register(modEventBus);
         CatVariantRegistry.CAT_VARIANTS.register(modEventBus);

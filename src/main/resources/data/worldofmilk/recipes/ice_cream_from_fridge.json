@@ -1,0 +1,13 @@
+{
+  "type": "worldofmilk:fridge",
+  "category": "food",
+  "ingredient": {
+    "item": "worldofmilk:concentred_milk"
+  },
+  "result": {
+    "count": 1,
+    "item": "worldofmilk:ice_cream_ball"
+  },
+  "experience": 0.2,
+  "cookingtime": 200
+}

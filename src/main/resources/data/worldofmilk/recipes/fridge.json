@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:redstone"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "F": {
+      "item": "minecraft:iron_bars"
+    }
+  },
+  "pattern": [
+    "###",
+    "#F#",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "item": "worldofmilk:fridge"
+  },
+  "show_notification": true
+}

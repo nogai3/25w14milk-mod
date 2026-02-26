@@ -1,0 +1,17 @@
+{
+  "values": [
+    "worldofmilk:dense_milk_block",
+    "worldofmilk:dense_milk_slab",
+    "worldofmilk:dense_milk_stairs",
+    "worldofmilk:dense_milk_door",
+    "worldofmilk:dense_milk_trapdoor",
+    "worldofmilk:dense_milk_fence",
+    "worldofmilk:dense_milk_fence_gate",
+    "worldofmilk:dense_milk_button",
+    "worldofmilk:dense_milk_pressure_plate",
+    "worldofmilk:dense_milk_sign",
+    "worldofmilk:dense_milk_wall_sign",
+    "worldofmilk:dense_milk_hanging_sign",
+    "worldofmilk:dense_milk_wall_hanging_sign"
+  ]
+}

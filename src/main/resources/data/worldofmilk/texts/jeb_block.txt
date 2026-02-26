@@ -16,7 +16,7 @@ Also try FNAG!
 Also try LighSync Games.
 Made by Mojang!
 Made by LighSync!
-private milkBlock = new MilkBlock();
+private MilkBlock milkBlock = new MilkBlock();
 0 != 1
 System.out.println("Written in Java");
 Because i`m in Milk Block?

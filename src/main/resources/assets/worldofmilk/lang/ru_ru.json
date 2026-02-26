@@ -72,12 +72,6 @@
   "painting.worldofmilk.plytoni.title": "PLYTONI",
   "painting.worldofmilk.wandarmo.author": "Злата Устименко",
   "painting.worldofmilk.wandarmo.title": "wandarmo",
-  "painting.worldofmilk.glackus_irl.author": "Глеб Устименко",
-  "painting.worldofmilk.glackus_irl.title": "'Великий glackus'",
-  "painting.worldofmilk.plytoni_irl.author": "Платон Унтеров",
-  "painting.worldofmilk.plytoni_irl.title": "Человек и лысый кот",
-  "painting.worldofmilk.kapitankastet_irl.author": "Константин Фадеев",
-  "painting.worldofmilk.kapitankastet_irl.title": "Абсолютное отчаяние",
   "painting.worldofmilk.gray_cat.author": "Глеб Устименко",
   "painting.worldofmilk.gray_cat.title": "Серый кот",
   "painting.worldofmilk.filya_cat.author": "Глеб Устименко",
@@ -101,9 +95,9 @@
   "item.worldofmilk.ice_cream_with_waffle_plombire": "Пломбир с вафлей",
   "item.worldofmilk.waffle": "Вафли",
 
-  "container.fridge": "Холодильник",
+  "container.worldofmilk.fridge": "Холодильник",
   "stat.worldofmilk.interact_with_fridge": "Взаимодействий с Холодильником",
-  "gui.recipebook.toogleRecipes.fridgeble": "Рецепты для холодильника",
+  "gui.recipebook.toogleRecipes.fridgeable": "Рецепты для холодильника",
 
   "container.creative.worldofmilk": "Обновление молочка",
 

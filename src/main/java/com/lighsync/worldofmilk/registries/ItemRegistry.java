@@ -30,6 +30,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> CARVED_DENSE_MILK_WALL = ITEMS.register("carved_dense_milk_wall", () -> new BlockItem(BlockRegistry.CARVED_DENSE_MILK_WALL.get(), new Item.Properties()));
     public static final RegistryObject<Item> CARVED_DENSE_MILK_STAIRS = ITEMS.register("carved_dense_milk_stairs", () -> new BlockItem(BlockRegistry.CARVED_DENSE_MILK_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<Item> JEB_BLOCK = ITEMS.register("jeb_block", () -> new BlockItem(BlockRegistry.JEB_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> FRIDGE_BLOCK = ITEMS.register("fridge", () -> new BlockItem(BlockRegistry.FRIDGE_BLOCK.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> CONCENTRED_MILK = ITEMS.register("concentred_milk", () -> new Item(new Item.Properties().food(Foods.CONCENTRED_MILK)));
     public static final RegistryObject<Item> BREAD_WITH_CONCENTRED_MILK = ITEMS.register("bread_with_concentred_milk", () -> new Item(new Item.Properties().food(Foods.BREAD_WITH_CONCENTRED_MILK)));
@@ -41,7 +42,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> ICE_CREAM = ITEMS.register("ice_cream", () -> new Item(new Item.Properties().food(Foods.ICE_CREAM)));
     public static final RegistryObject<Item> ICE_CREAM_WITH_WAFFLE_PLOMBIRE = ITEMS.register("ice_cream_with_waffle_plombire", () -> new Item(new Item.Properties().food(Foods.ICE_CREAM_WITH_WAFFLE_PLOMBIRE)));
 
-    public static final RegistryObject<Item> PRESSED_BREAD = ITEMS.register("pressed_bread", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PRESSED_BREAD = ITEMS.register("pressed_bread", () -> new Item(new Item.Properties().food(Foods.PRESSED_BREAD)));
     public static final RegistryObject<Item> PRESSED_BREAD_UPGRADE = ITEMS.register("pressed_bread_upgrade", () -> new PressedBreadUpgradeItem());
 
     public static final RegistryObject<Item> BREAD_SWORD = ITEMS.register("bread_sword", () -> new BreadSwordItem(Tiers.PRESSED_BREAD, new Item.Properties().fireResistant().rarity(Rarity.EPIC)));

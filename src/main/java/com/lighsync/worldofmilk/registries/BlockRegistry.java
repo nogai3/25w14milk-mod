@@ -25,7 +25,7 @@ public class BlockRegistry {
             () -> new FallingBlock(
                     BlockBehaviour.Properties.of()
                             .instrument(NoteBlockInstrument.COW_BELL)
-                            .strength(2.0f, 3.0f)
+                            .strength(2.5F, 3.5F)
                             .sound(SoundType.GRASS)
                             .ignitedByLava()
     ));
@@ -36,8 +36,7 @@ public class BlockRegistry {
                             .replaceable()
                             .forceSolidOff()
                             .randomTicks()
-                            .strength(0.1f)
-                            .requiresCorrectToolForDrops()
+                            .strength(0.25F)
                             .sound(SoundType.SNOW)
                             .isViewBlocking((state, level, pos) -> state.getValue(MilkLayerBlock.LAYERS) >= 8)
                             .pushReaction(PushReaction.DESTROY)
@@ -47,7 +46,7 @@ public class BlockRegistry {
                 () -> new Block(
                         BlockBehaviour.Properties.of()
                                 .instrument(NoteBlockInstrument.BELL)
-                                .strength(2.5f, 3.0f)
+                                .strength(2.75F, 3.25F)
                                 .sound(SoundType.COPPER)
     ));
 
@@ -55,7 +54,7 @@ public class BlockRegistry {
             () -> new DoorBlock(
                     BlockBehaviour.Properties.of()
                             .instrument(NoteBlockInstrument.BELL)
-                            .strength(2.5f)
+                            .strength(2.75F)
                             .noOcclusion()
                             .pushReaction(PushReaction.DESTROY),
                     MILK_SET_TYPE
@@ -65,7 +64,7 @@ public class BlockRegistry {
             () -> new TrapDoorBlock(
                     BlockBehaviour.Properties.of()
                             .instrument(NoteBlockInstrument.BELL)
-                            .strength(2.5f)
+                            .strength(2.75F)
                             .noOcclusion(),
                     MILK_SET_TYPE
     ));
@@ -85,7 +84,7 @@ public class BlockRegistry {
             () -> new SlabBlock(
                     BlockBehaviour.Properties.of()
                             .instrument(NoteBlockInstrument.BELL)
-                            .strength(2.5F, 3.0F)
+                            .strength(2.75F, 3.25F)
                             .sound(SoundType.COPPER)
     ));
 
@@ -100,7 +99,7 @@ public class BlockRegistry {
                     BlockBehaviour.Properties.of()
                             .forceSolidOn()
                             .instrument(NoteBlockInstrument.BELL)
-                            .strength(2.0F, 3.0F)
+                            .strength(2.75F, 3.5F)
                             .sound(SoundType.COPPER)
     ));
 
@@ -109,7 +108,7 @@ public class BlockRegistry {
                 BlockBehaviour.Properties.of()
                         .forceSolidOn()
                         .instrument(NoteBlockInstrument.BELL)
-                        .strength(2.0F, 3.0F),
+                        .strength(2.75F, 3.5F),
                 MILK_WOOD_TYPE
     ));
 
@@ -144,7 +143,7 @@ public class BlockRegistry {
                             .forceSolidOn()
                             .instrument(NoteBlockInstrument.BELL)
                             .noCollission()
-                            .strength(1.0F)
+                            .strength(2.0F)
                             .pushReaction(PushReaction.DESTROY),
                     MILK_SET_TYPE
     ));
@@ -153,7 +152,7 @@ public class BlockRegistry {
             () -> new Block(
                     BlockBehaviour.Properties.of()
                             .instrument(NoteBlockInstrument.XYLOPHONE)
-                            .strength(2.5f, 5.0f)
+                            .strength(2.75F, 5.25F)
                             .sound(SoundType.COPPER)
     ));
 
@@ -161,7 +160,7 @@ public class BlockRegistry {
             () -> new SlabBlock(
                     BlockBehaviour.Properties.of()
                             .instrument(NoteBlockInstrument.XYLOPHONE)
-                            .strength(2.5f, 5.0f)
+                            .strength(2.75F, 5.25F)
                             .sound(SoundType.COPPER)
     ));
 
@@ -181,7 +180,7 @@ public class BlockRegistry {
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.STONE)
                             .instrument(NoteBlockInstrument.BASS)
-                            .strength(2.5f)
+                            .strength(3.5F)
                             .noOcclusion()
                             .ignitedByLava()
                             .pushReaction(PushReaction.DESTROY)
