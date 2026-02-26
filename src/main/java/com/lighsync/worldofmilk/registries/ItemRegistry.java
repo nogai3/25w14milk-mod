@@ -5,6 +5,7 @@ import com.lighsync.worldofmilk.items.*;
 import com.lighsync.worldofmilk.items.utils.ArmorMaterials;
 import com.lighsync.worldofmilk.items.utils.Tiers;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -58,4 +59,6 @@ public class ItemRegistry {
 
     public static final RegistryObject<Item> ENDER_PEARL_ARROW = ITEMS.register("ender_pearl_arrow", () -> new EnderPearlArrowItem(new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> TNT_ARROW = ITEMS.register("tnt_arrow", () -> new TNTArrowItem(new Item.Properties().rarity(Rarity.EPIC)));
+
+    public static final RegistryObject<Item> MILK_ZOMBIE_SPAWN_EGG = ITEMS.register("milk_zombie_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.MILK_ZOMBIE, 13545366,7969893, new Item.Properties()));
 }
