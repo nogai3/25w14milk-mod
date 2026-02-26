@@ -60,5 +60,5 @@ public class ItemRegistry {
     public static final RegistryObject<Item> ENDER_PEARL_ARROW = ITEMS.register("ender_pearl_arrow", () -> new EnderPearlArrowItem(new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> TNT_ARROW = ITEMS.register("tnt_arrow", () -> new TNTArrowItem(new Item.Properties().rarity(Rarity.EPIC)));
 
-    public static final RegistryObject<Item> MILK_ZOMBIE_SPAWN_EGG = ITEMS.register("milk_zombie_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.MILK_ZOMBIE, 13545366,7969893, new Item.Properties()));
+    public static final RegistryObject<Item> MILK_ZOMBIE_SPAWN_EGG = ITEMS.register("milk_zombie_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.MILK_ZOMBIE, 44975,14144467, new Item.Properties()));
 }
