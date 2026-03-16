@@ -41,4 +41,5 @@ public class FridgeMenu extends AbstractFurnaceMenu {
     protected boolean isFuel(ItemStack item) {
         return FridgeBlockEntity.isValidFridgeFuel(item);
     }
+    /*** tezt ***/
 }
