@@ -1,9 +1,11 @@
 package com.lighsync.worldofmilk.blocks;
 
 import com.lighsync.worldofmilk.blocks.utils.JebBlockMessageManager;
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -17,13 +19,22 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraftforge.common.data.SoundDefinition;
+
 import javax.annotation.Nullable;
 
-public class JebBlock extends Block {
+public class   JebBlock extends Block {
     private static final String CRYPTED_API_KEY = "";
     private boolean canUseBlock = true;
     private static final JebBlockMessageManager MESSAGE_MANAGER = JebBlockMessageManager.INSTANCE;
-    private static final SoundEvent[] SOUND_EVENTS = {};
+    private static final SoundEvent[] SOUND_EVENTS = {
+            SoundEvents.ANVIL_PLACE, SoundEvents.SHEEP_AMBIENT, SoundEvents.COW_AMBIENT,
+            SoundEvents.HORSE_DEATH, SoundEvents.PISTON_CONTRACT, SoundEvents.GENERIC_EXPLODE,
+            SoundEvents.HORSE_HURT, SoundEvents.PLAYER_HURT, SoundEvents.PLAYER_DEATH,
+            SoundEvents.ENDERMAN_AMBIENT, SoundEvents.ENDERMAN_DEATH, SoundEvents.PLAYER_HURT_DROWN,
+            SoundEvents.SHULKER_AMBIENT, SoundEvents.PILLAGER_AMBIENT, SoundEvents.PILLAGER_HURT,
+            SoundEvents.STONE_BREAK, SoundEvents.WOOD_BREAK
+    };
 
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
 

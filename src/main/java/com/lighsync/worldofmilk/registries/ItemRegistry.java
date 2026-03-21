@@ -44,6 +44,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> ICE_CREAM_WITH_WAFFLE_PLOMBIRE = ITEMS.register("ice_cream_with_waffle_plombire", () -> new Item(new Item.Properties().food(Foods.ICE_CREAM_WITH_WAFFLE_PLOMBIRE)));
 
     public static final RegistryObject<Item> PRESSED_BREAD = ITEMS.register("pressed_bread", () -> new Item(new Item.Properties().food(Foods.PRESSED_BREAD)));
+    public static final RegistryObject<Item> BAKED_PRESSED_BREAD = ITEMS.register("baked_pressed_bread", () -> new Item(new Item.Properties().food(Foods.PRESSED_BREAD)));
     public static final RegistryObject<Item> PRESSED_BREAD_UPGRADE = ITEMS.register("pressed_bread_upgrade", () -> new PressedBreadUpgradeItem());
 
     public static final RegistryObject<Item> BREAD_SWORD = ITEMS.register("bread_sword", () -> new BreadSwordItem(Tiers.PRESSED_BREAD, new Item.Properties().fireResistant().rarity(Rarity.EPIC)));
@@ -56,6 +57,11 @@ public class ItemRegistry {
     public static final RegistryObject<Item> BREAD_CHESTPLATE = ITEMS.register("bread_chestplate", () -> new ArmorItem(ArmorMaterials.PRESSED_BREAD, ArmorItem.Type.CHESTPLATE, (new Item.Properties().fireResistant().rarity(Rarity.EPIC))));
     public static final RegistryObject<Item> BREAD_LEGGINGS = ITEMS.register("bread_leggings", () -> new ArmorItem(ArmorMaterials.PRESSED_BREAD, ArmorItem.Type.LEGGINGS, (new Item.Properties().fireResistant().rarity(Rarity.EPIC))));
     public static final RegistryObject<Item> BREAD_BOOTS = ITEMS.register("bread_boots", () -> new ArmorItem(ArmorMaterials.PRESSED_BREAD, ArmorItem.Type.BOOTS, (new Item.Properties().fireResistant().rarity(Rarity.EPIC))));
+
+    public static final RegistryObject<Item> BAKED_BREAD_HELMET = ITEMS.register("baked_bread_helmet", () -> new ArmorItem(ArmorMaterials.BAKED_PRESSED_BREAD, ArmorItem.Type.HELMET, (new Item.Properties().fireResistant().rarity(Rarity.EPIC))));
+    public static final RegistryObject<Item> BAKED_BREAD_CHESTPLATE = ITEMS.register("baked_bread_chestplate", () -> new ArmorItem(ArmorMaterials.BAKED_PRESSED_BREAD, ArmorItem.Type.CHESTPLATE, (new Item.Properties().fireResistant().rarity(Rarity.EPIC))));
+    public static final RegistryObject<Item> BAKED_BREAD_LEGGINGS = ITEMS.register("baked_bread_leggings", () -> new ArmorItem(ArmorMaterials.BAKED_PRESSED_BREAD, ArmorItem.Type.LEGGINGS, (new Item.Properties().fireResistant().rarity(Rarity.EPIC))));
+    public static final RegistryObject<Item> BAKED_BREAD_BOOTS = ITEMS.register("baked_bread_boots", () -> new ArmorItem(ArmorMaterials.BAKED_PRESSED_BREAD, ArmorItem.Type.BOOTS, (new Item.Properties().fireResistant().rarity(Rarity.EPIC))));
 
     public static final RegistryObject<Item> ENDER_PEARL_ARROW = ITEMS.register("ender_pearl_arrow", () -> new EnderPearlArrowItem(new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> TNT_ARROW = ITEMS.register("tnt_arrow", () -> new TNTArrowItem(new Item.Properties().rarity(Rarity.EPIC)));

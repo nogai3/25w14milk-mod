@@ -24,6 +24,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.EquipableCarvedPumpkinBlock;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.TickEvent;
@@ -99,6 +100,13 @@ public class CommonEvents {
                     isWearing(player, EquipmentSlot.FEET, ItemRegistry.BREAD_BOOTS.get());
         }
 
+        private static boolean hasBakedFullSet(Player player) {
+            return isWearing(player, EquipmentSlot.HEAD, ItemRegistry.BAKED_BREAD_HELMET.get()) ||
+                    isWearing(player, EquipmentSlot.CHEST, ItemRegistry.BAKED_BREAD_CHESTPLATE.get()) ||
+                    isWearing(player, EquipmentSlot.LEGS, ItemRegistry.BAKED_BREAD_LEGGINGS.get()) ||
+                    isWearing(player, EquipmentSlot.FEET, ItemRegistry.BAKED_BREAD_BOOTS.get());
+        }
+
         @SubscribeEvent
         public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
             if (event.phase != TickEvent.Phase.END) return;
@@ -106,13 +114,32 @@ public class CommonEvents {
             Player player = event.player;
             if (player.level().isClientSide) return;
 
-            if (hasFullSet(player) && player.getFoodData().getFoodLevel() < 5.5F) {
-                player.addEffect(new MobEffectInstance(
-                        MobEffects.SATURATION,
-                        7,
-                        0,
-                        true, false, true
-                ));
+            if ((hasFullSet(player) || hasBakedFullSet(player)) && player.getFoodData().getFoodLevel() < 5.5F) {
+                if (!player.hasEffect(MobEffects.SATURATION)) {
+                    player.addEffect(new MobEffectInstance(
+                            MobEffects.SATURATION,
+                            7,
+                            0,
+                            true, false, true
+                    ));
+                }
+            }
+
+            if (hasBakedFullSet(player) && player.getHealth() < 5) {
+                if (!player.hasEffect(MobEffects.REGENERATION)) {
+                    player.addEffect(new MobEffectInstance(
+                            MobEffects.REGENERATION,
+                            80, 1,
+                            true, false, true
+                    ));
+                }
+                if (!player.hasEffect(MobEffects.ABSORPTION)) {
+                    player.addEffect(new MobEffectInstance(
+                            MobEffects.ABSORPTION,
+                            80, 1,
+                            true, false, true
+                    ));
+                }
             }
         }
 
@@ -142,10 +169,10 @@ public class CommonEvents {
 
             if (player.level().isClientSide) return;
 
-            String playerName = player.getGameProfile().getName();
+            String playerName = player.getGameProfile().getName().toLowerCase();
             switch (playerName) {
-                case "glackus", "wandarmo", "PLYTONI", "KAPITANKASTET" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(Items.MILK_BUCKET)));
-                case "jeb_", "Jeb_" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(ItemRegistry.JEB_BLOCK.get())));
+                case "glackus", "wandarmo", "plytoni", "kapitankastet" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(Items.MILK_BUCKET)));
+                case "jeb_" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(ItemRegistry.JEB_BLOCK.get())));
                 // case "Dev" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(ItemRegistry.MILK_LAYER_BLOCK.get())));
             }
         }

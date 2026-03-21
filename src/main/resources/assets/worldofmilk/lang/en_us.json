@@ -64,6 +64,12 @@
   "item.worldofmilk.pressed_bread": "Compressed Bread",
   "item.worldofmilk.pressed_bread_upgrade": "Bread Upgrade",
 
+  "item.worldofmilk.baked_bread_helmet": "Baked Bread Helmet",
+  "item.worldofmilk.baked_bread_chestplate": "Baked Bread Chestplate",
+  "item.worldofmilk.baked_bread_leggings": "Baked Bread Leggings",
+  "item.worldofmilk.baked_bread_boots": "Baked Bread Boots",
+  "item.worldofmilk.baked_pressed_bread": "Baked Compressed Bread",
+
   "painting.worldofmilk.glackus.author": "Gleb Ustimenko",
   "painting.worldofmilk.glackus.title": "glackus",
   "painting.worldofmilk.kapitankastet.author": "Konstantin Fadeev",

@@ -69,13 +69,6 @@ public class BlockRegistry {
                     MILK_SET_TYPE
     ));
 
-     /*public static final RegistryObject<Block> DENSE_MILK_SIGN = BLOCKS.register("dense_milk_sign",
-            () -> new SignBlock(BlockBehaviour.Properties.of()
-                    .forceSolidOn()
-                    .instrument(NoteBlockInstrument.BELL)
-                    .noCollission()
-                    .strength(1.5f), MILK_WOOD_TYPE));*/
-
     public static final RegistryObject<Block> DENSE_MILK_BUTTON = BLOCKS.register("dense_milk_button",
              () -> new ButtonBlock(buttonProperties(), MILK_SET_TYPE, 30, true)
     );

@@ -1,5 +1,6 @@
 package com.lighsync.worldofmilk.items.utils;
 
+import com.lighsync.worldofmilk.Worldofmilk;
 import com.lighsync.worldofmilk.registries.ItemRegistry;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
@@ -21,6 +22,14 @@ public enum ArmorMaterials implements StringRepresentable, ArmorMaterial {
         element.put(ArmorItem.Type.HELMET, 5);
     }), 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.2F, () -> {
         return Ingredient.of(ItemRegistry.PRESSED_BREAD.get());
+    }),
+    BAKED_PRESSED_BREAD("baked_pressed_bread", 40, Util.make(new EnumMap<>(ArmorItem.Type.class), (element) -> {
+        element.put(ArmorItem.Type.BOOTS, 3);
+        element.put(ArmorItem.Type.LEGGINGS, 6);
+        element.put(ArmorItem.Type.CHESTPLATE, 8);
+        element.put(ArmorItem.Type.HELMET, 4);
+    }), 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5F, 0.1F, () -> {
+        return Ingredient.of(ItemRegistry.BAKED_PRESSED_BREAD.get());
     });
 
     public static final StringRepresentable.EnumCodec<ArmorMaterials> CODEC = StringRepresentable.fromEnum(ArmorMaterials::values);
@@ -64,8 +73,8 @@ public enum ArmorMaterials implements StringRepresentable, ArmorMaterial {
     public int getEnchantmentValue() { return this.enchantmentValue; }
     public SoundEvent getEquipSound() { return this.sound; }
     public Ingredient getRepairIngredient() { return this.repairIngredient.get(); }
-    public String getName() { return "worldofmilk:" + this.name; }
+    public String getName() { return Worldofmilk.MODID + ":" + this.name; }
     public float getToughness() { return this.toughness; }
     public float getKnockbackResistance() { return this.knockbackResistance; }
-    public String getSerializedName() { return "worldofmilk:" + this.name; }
+    public String getSerializedName() { return Worldofmilk.MODID + ":" + this.name; }
 }

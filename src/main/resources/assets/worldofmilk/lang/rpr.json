@@ -64,6 +64,12 @@
   "item.worldofmilk.pressed_bread": "Хлѣбъ спрессованный (кирпичъ)",
   "item.worldofmilk.pressed_bread_upgrade": "Улучшеніе хлѣбное (великое)",
 
+  "item.worldofmilk.baked_bread_helmet":  "Шлемъ хлѣбный запечённый",
+  "item.worldofmilk.baked_bread_chestplate": "Нагрудникъ хлѣбный запечённый",
+  "item.worldofmilk.baked_bread_leggings": "Поножи хлѣбныя запечённыя",
+  "item.worldofmilk.baked_bread_boots": "Сапоги хлѣбныя запечённыя",
+  "item.worldofmilk.baked_pressed_bread": "Хлѣбъ спрессованный запечённый (суперъ-кирпичъ)",
+
   "painting.worldofmilk.glackus.author": "Глѣбъ Устименко",
   "painting.worldofmilk.glackus.title": "glackus",
   "painting.worldofmilk.kapitankastet.author": "Константинъ Фадеевъ",
