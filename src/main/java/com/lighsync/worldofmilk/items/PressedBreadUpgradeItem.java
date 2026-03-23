@@ -28,7 +28,6 @@ public class PressedBreadUpgradeItem extends SmithingTemplateItem {
 
     // item.worldofmilk.smithing_template.pressed_bread_upgrade.applies_to
     // item.worldofmilk.smithing_template.pressed_bread_upgrade.ingredients
-    // upgrade.worldofmilk.pressed_bread_upgrade
     // item.worldofmilk.smithing_template.pressed_bread_upgrade.base_slot_description
     // item.worldofmilk.smithing_template.pressed_bread_upgrade.additions_slot_description
     private static final Component PRESSED_BREAD_UPGRADE_APPLIES_TO =

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "worldofmilk:pressed_butter"
+    },
+    "D": {
+      "item": "minecraft:iron_ingot"
+    },
+    "I": {
+      "item": "minecraft:stone"
+    },
+    "B": {
+      "item": "worldofmilk:butter_bucket"
+    }
+  },
+  "pattern": [
+    "DDD",
+    "I#I",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "item": "worldofmilk:pressed_butter_upgrade"
+  },
+  "show_notification": true
+}

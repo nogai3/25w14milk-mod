@@ -26,10 +26,18 @@ public enum ArmorMaterials implements StringRepresentable, ArmorMaterial {
     BAKED_PRESSED_BREAD("baked_pressed_bread", 40, Util.make(new EnumMap<>(ArmorItem.Type.class), (element) -> {
         element.put(ArmorItem.Type.BOOTS, 3);
         element.put(ArmorItem.Type.LEGGINGS, 6);
-        element.put(ArmorItem.Type.CHESTPLATE, 8);
-        element.put(ArmorItem.Type.HELMET, 4);
+        element.put(ArmorItem.Type.CHESTPLATE, 7);
+        element.put(ArmorItem.Type.HELMET, 3);
     }), 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5F, 0.1F, () -> {
         return Ingredient.of(ItemRegistry.BAKED_PRESSED_BREAD.get());
+    }),
+    BUTTER("butter", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (element) -> {
+        element.put(ArmorItem.Type.BOOTS, 2);
+        element.put(ArmorItem.Type.LEGGINGS, 5);
+        element.put(ArmorItem.Type.CHESTPLATE, 6);
+        element.put(ArmorItem.Type.HELMET, 3);
+    }), 10, SoundEvents.ARMOR_EQUIP_CHAIN, 2.25F, 0F, () -> {
+        return Ingredient.of(ItemRegistry.MILK_BLOCK.get());
     });
 
     public static final StringRepresentable.EnumCodec<ArmorMaterials> CODEC = StringRepresentable.fromEnum(ArmorMaterials::values);

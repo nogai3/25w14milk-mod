@@ -2,6 +2,7 @@ package com.lighsync.worldofmilk.registries;
 
 import com.lighsync.worldofmilk.Worldofmilk;
 import com.lighsync.worldofmilk.blocks.*;
+import com.mojang.realmsclient.util.JsonUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.BlockGetter;
@@ -22,7 +23,7 @@ public class BlockRegistry {
     public static final WoodType MILK_WOOD_TYPE = WoodType.register(new WoodType(Worldofmilk.MODID + ":dense_milk", MILK_SET_TYPE));
 
     public static final RegistryObject<Block> MILK_BLOCK = BLOCKS.register("milk_block",
-            () -> new FallingBlock(
+            () -> new MilkBlock(
                     BlockBehaviour.Properties.of()
                             .instrument(NoteBlockInstrument.COW_BELL)
                             .strength(2.5F, 3.5F)

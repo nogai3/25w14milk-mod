@@ -1,0 +1,13 @@
+{
+  "type": "worldofmilk:fridge",
+  "category": "food",
+  "ingredient": {
+    "item": "worldofmilk:butter_bucket"
+  },
+  "result": {
+    "count": 1,
+    "item": "worldofmilk:pressed_butter"
+  },
+  "experience": 0.2,
+  "cookingtime": 200
+}

@@ -35,6 +35,8 @@ public class ItemRegistry {
 
     public static final RegistryObject<Item> CONCENTRED_MILK = ITEMS.register("concentred_milk", () -> new Item(new Item.Properties().food(Foods.CONCENTRED_MILK)));
     public static final RegistryObject<Item> BREAD_WITH_CONCENTRED_MILK = ITEMS.register("bread_with_concentred_milk", () -> new Item(new Item.Properties().food(Foods.BREAD_WITH_CONCENTRED_MILK)));
+    public static final RegistryObject<Item> BUTTER_BUCKET = ITEMS.register("butter_bucket", () -> new ButterBucketItem(new Item.Properties().food(Foods.CONCENTRED_MILK).stacksTo(16)));
+    public static final RegistryObject<Item> BREAD_WITH_BUTTER = ITEMS.register("bread_with_butter", () -> new Item(new Item.Properties().food(Foods.MILK_BLOCK)));
     public static final RegistryObject<Item> EASTER_CAKE = ITEMS.register("easter_cake", () -> new Item(new Item.Properties().food(Foods.EASTER_CAKE)));
     public static final RegistryObject<Item> EASTER_CAKE_BLANK = ITEMS.register("easter_cake_blank", () -> new Item(new Item.Properties().food(Foods.EASTER_CAKE_BLANK)));
     public static final RegistryObject<Item> SPRINKLES = ITEMS.register("sprinkles", () -> new Item(new Item.Properties().food(Foods.SPRIKNLES)));
@@ -62,6 +64,20 @@ public class ItemRegistry {
     public static final RegistryObject<Item> BAKED_BREAD_CHESTPLATE = ITEMS.register("baked_bread_chestplate", () -> new ArmorItem(ArmorMaterials.BAKED_PRESSED_BREAD, ArmorItem.Type.CHESTPLATE, (new Item.Properties().fireResistant().rarity(Rarity.EPIC))));
     public static final RegistryObject<Item> BAKED_BREAD_LEGGINGS = ITEMS.register("baked_bread_leggings", () -> new ArmorItem(ArmorMaterials.BAKED_PRESSED_BREAD, ArmorItem.Type.LEGGINGS, (new Item.Properties().fireResistant().rarity(Rarity.EPIC))));
     public static final RegistryObject<Item> BAKED_BREAD_BOOTS = ITEMS.register("baked_bread_boots", () -> new ArmorItem(ArmorMaterials.BAKED_PRESSED_BREAD, ArmorItem.Type.BOOTS, (new Item.Properties().fireResistant().rarity(Rarity.EPIC))));
+
+    public static final RegistryObject<Item> PRESSED_BUTTER = ITEMS.register("pressed_butter", () -> new Item(new Item.Properties().food(Foods.MILK_BLOCK)));
+    public static final RegistryObject<Item> PRESSED_BUTTER_UPGRADE = ITEMS.register("pressed_butter_upgrade", () -> new PressedButterUpgradeItem());
+
+    public static final RegistryObject<Item> BUTTER_HELMET = ITEMS.register("butter_helmet", () -> new ArmorItem(ArmorMaterials.BUTTER, ArmorItem.Type.HELMET, (new Item.Properties().rarity(Rarity.UNCOMMON))));
+    public static final RegistryObject<Item> BUTTER_CHESTPLATE = ITEMS.register("butter_chestplate", () -> new ArmorItem(ArmorMaterials.BUTTER, ArmorItem.Type.CHESTPLATE, (new Item.Properties().rarity(Rarity.UNCOMMON))));
+    public static final RegistryObject<Item> BUTTER_LEGGINGS = ITEMS.register("butter_leggings", () -> new ArmorItem(ArmorMaterials.BUTTER, ArmorItem.Type.LEGGINGS, (new Item.Properties().rarity(Rarity.UNCOMMON))));
+    public static final RegistryObject<Item> BUTTER_BOOTS = ITEMS.register("butter_boots", () -> new ArmorItem(ArmorMaterials.BUTTER, ArmorItem.Type.BOOTS, (new Item.Properties().rarity(Rarity.UNCOMMON))));
+
+    public static final RegistryObject<Item> BUTTER_SWORD = ITEMS.register("butter_sword", () -> new ButterSwordItem(Tiers.BUTTER, new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> BUTTER_PICKAXE = ITEMS.register("butter_pickaxe", () -> new PickaxeItem(Tiers.BUTTER, 1, -2.8F, new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> BUTTER_AXE = ITEMS.register("butter_axe", () -> new AxeItem(Tiers.BUTTER, 5.0F, -3.1F, new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> BUTTER_SHOVEL = ITEMS.register("butter_shovel", () -> new ShovelItem(Tiers.BUTTER, 1.5F, -3.0F, new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> BUTTER_HOE = ITEMS.register("butter_hoe", () -> new HoeItem(Tiers.BUTTER, -2, -1.0F, new Item.Properties().rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> ENDER_PEARL_ARROW = ITEMS.register("ender_pearl_arrow", () -> new EnderPearlArrowItem(new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> TNT_ARROW = ITEMS.register("tnt_arrow", () -> new TNTArrowItem(new Item.Properties().rarity(Rarity.EPIC)));

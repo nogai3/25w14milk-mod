@@ -25,6 +25,8 @@
 
   "item.worldofmilk.concentred_milk": "Сгущённое молоко",
   "item.worldofmilk.bread_with_concentred_milk": "Хлеб со сгущённым молоком",
+  "item.worldofmilk.butter_bucket": "Ведро сливочного масла",
+  "item.worldofmilk.bread_with_butter": "Хлеб со сливочным маслом",
   "item.worldofmilk.easter_cake_blank": "Заготовка для пасхального торта",
   "item.worldofmilk.easter_cake": "Пасхальный торт",
   "item.worldofmilk.sprinkles": "Посыпка",
@@ -70,6 +72,18 @@
   "item.worldofmilk.baked_bread_boots": "Запечённые хлебные ботинки",
   "item.worldofmilk.baked_pressed_bread": "Запечённый спрессованный хлеб",
 
+  "item.worldofmilk.butter_sword": "Сливочный меч",
+  "item.worldofmilk.butter_pickaxe": "Сливочная кирка",
+  "item.worldofmilk.butter_axe": "Сливочный топор",
+  "item.worldofmilk.butter_shovel": "Сливочная лопата",
+  "item.worldofmilk.butter_hoe": "Сливочная мотыга",
+  "item.worldofmilk.butter_helmet": "Сливочный шлем",
+  "item.worldofmilk.butter_chestplate": "Сливочный нагрудник",
+  "item.worldofmilk.butter_leggings": "Сливочные поножи",
+  "item.worldofmilk.butter_boots": "Сливочные ботинки",
+  "item.worldofmilk.pressed_butter": "Спрессованное масло",
+  "item.worldofmilk.pressed_butter_upgrade": "Маслянное улучшение",
+
   "painting.worldofmilk.glackus.author": "Глеб Устименко",
   "painting.worldofmilk.glackus.title": "glackus",
   "painting.worldofmilk.kapitankastet.author": "Константин Фадеев",
@@ -112,6 +126,12 @@
   "item.worldofmilk.smithing_template.pressed_bread_upgrade.ingredients": "Спрессованный хлеб",
   "item.worldofmilk.smithing_template.pressed_bread_upgrade.base_slot_description": "Поместите незеритовый доспех, инструмент или оружие",
   "item.worldofmilk.smithing_template.pressed_bread_upgrade.additions_slot_description": "Поместите спресованный хлеб",
+
+  "upgrade.worldofmilk.pressed_butter_upgrade": "Маслянное улучшение",
+  "item.worldofmilk.smithing_template.pressed_butter_upgrade.applies_to": "Железному снаряжению",
+  "item.worldofmilk.smithing_template.pressed_butter_upgrade.ingredients": "Спресованное масло",
+  "item.worldofmilk.smithing_template.pressed_butter_upgrade.base_slot_description": "Поместите железный доспех, инструмент или оружие",
+  "item.worldofmilk.smithing_template.pressed_butter_upgrade.additions_slot_description": "Поместите спресованное масло",
 
   "genai.version": "LighSync Gemini | Версия 1.2 | (C) LighSync Games. 2023-2025. Все права защищены!",
   "genai.encrypt.error": "Ошибка шифрования: ",

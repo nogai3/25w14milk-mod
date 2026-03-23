@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "worldofmilk:pressed_butter"
+  },
+  "base": {
+    "item": "minecraft:iron_pickaxe"
+  },
+  "result": {
+    "item": "worldofmilk:butter_pickaxe"
+  },
+  "template": {
+    "item": "worldofmilk:pressed_butter_upgrade"
+  }
+}

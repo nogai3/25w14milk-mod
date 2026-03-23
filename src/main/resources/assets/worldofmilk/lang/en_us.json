@@ -25,6 +25,8 @@
 
   "item.worldofmilk.concentred_milk": "Condensed Milk",
   "item.worldofmilk.bread_with_concentred_milk": "Bread with Condensed Milk",
+  "item.worldofmilk.butter_bucket": "Butter Bucket",
+  "item.worldofmilk.bread_with_butter": "Bread with Butter",
   "item.worldofmilk.easter_cake_blank": "Easter Cake Base",
   "item.worldofmilk.easter_cake": "Easter Cake",
   "item.worldofmilk.sprinkles": "Sprinkles",
@@ -70,6 +72,18 @@
   "item.worldofmilk.baked_bread_boots": "Baked Bread Boots",
   "item.worldofmilk.baked_pressed_bread": "Baked Compressed Bread",
 
+  "item.worldofmilk.butter_sword": "Butter Sword",
+  "item.worldofmilk.butter_pickaxe": "Butter Pickaxe",
+  "item.worldofmilk.butter_axe": "Butter Axe",
+  "item.worldofmilk.butter_shovel": "Butter Shovel",
+  "item.worldofmilk.butter_hoe": "Butter Hoe",
+  "item.worldofmilk.butter_helmet": "Butter Helmet",
+  "item.worldofmilk.butter_chestplate": "Butter Chestplate",
+  "item.worldofmilk.butter_leggings": "Butter Leggings",
+  "item.worldofmilk.butter_boots": "Butter Boots",
+  "item.worldofmilk.pressed_butter": "Compressed Butter",
+  "item.worldofmilk.pressed_butter_upgrade": "Butter Upgrade",
+
   "painting.worldofmilk.glackus.author": "Gleb Ustimenko",
   "painting.worldofmilk.glackus.title": "glackus",
   "painting.worldofmilk.kapitankastet.author": "Konstantin Fadeev",
@@ -112,6 +126,12 @@
   "item.worldofmilk.smithing_template.pressed_bread_upgrade.ingredients": "Pressed Bread",
   "item.worldofmilk.smithing_template.pressed_bread_upgrade.base_slot_description": "Add netherite armor, weapon or tool",
   "item.worldofmilk.smithing_template.pressed_bread_upgrade.additions_slot_description": "Add Pressed Bread",
+
+  "upgrade.worldofmilk.pressed_butter_upgrade": "Pressed Butter Upgrade",
+  "item.worldofmilk.smithing_template.pressed_butter_upgrade.applies_to": "Iron Equipment",
+  "item.worldofmilk.smithing_template.pressed_butter_upgrade.ingredients": "Pressed Butter",
+  "item.worldofmilk.smithing_template.pressed_butter_upgrade.base_slot_description": "Add iron armor, weapon or tool",
+  "item.worldofmilk.smithing_template.pressed_butter_upgrade.additions_slot_description": "Add Pressed Butter",
 
   "genai.version": "LighSync Gemini | Version 1.2 | (C) LighSync Games. 2023-2025. All rights reserved!",
   "genai.encrypt.error": "Encryption error: ",

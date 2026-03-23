@@ -10,6 +10,9 @@ import java.util.function.Supplier;
 public enum Tiers implements Tier {
     PRESSED_BREAD(4, 2031, 9.0F, 4.0F, 15, () -> {
         return Ingredient.of(ItemRegistry.PRESSED_BREAD.get());
+    }),
+    BUTTER(3, 312, 7.25F, 2.5F, 15, () -> {
+        return Ingredient.of(ItemRegistry.MILK_BLOCK.get());
     });
 
     private final int level;

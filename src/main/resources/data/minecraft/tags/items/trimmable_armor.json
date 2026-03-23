@@ -5,8 +5,12 @@
     "worldofmilk:bread_leggings",
     "worldofmilk:bread_boots",
     "worldofmilk:baked_bread_helmet",
-    "worldofmilk:baked_bread_chetsplate",
+    "worldofmilk:baked_bread_chestplate",
     "worldofmilk:baked_bread_leggings",
-    "worldofmilk:baked_bread_boots"
+    "worldofmilk:baked_bread_boots",
+    "worldofmilk:butter_helmet",
+    "worldofmilk:butter_chestplate",
+    "worldofmilk:butter_leggings",
+    "worldofmilk:butter_boots"
   ]
 }
