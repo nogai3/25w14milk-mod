@@ -84,6 +84,18 @@
   "item.worldofmilk.pressed_butter": "Спрессованное масло",
   "item.worldofmilk.pressed_butter_upgrade": "Маслянное улучшение",
 
+  "item.minecraft.potion.effect.butterish_potion": "Зелье маслянистости",
+  "item.minecraft.potion.effect.long_butterish_potion": "Зелье маслянистости",
+  "item.minecraft.potion.effect.strong_butterish_potion": "Зелье маслянистости",
+  "item.minecraft.splash_potion.effect.butterish_potion": "Взрывное зелье маслянистости",
+  "item.minecraft.splash_potion.effect.long_butterish_potion": "Взрывное зелье маслянистости",
+  "item.minecraft.splash_potion.effect.strong_butterish_potion": "Взрывное зелье маслянистости",
+  "item.minecraft.lingering_potion.effect.butterish_potion": "Туманное зелье маслянистости",
+  "item.minecraft.lingering_potion.effect.long_butterish_potion": "Туманное зелье маслянистости",
+  "item.minecraft.lingering_potion.effect.strong_butterish_potion": "Туманное зелье маслянистости",
+
+  "item.worldofmilk.etheria_reference": "Отсылка на Этерию?..",
+
   "painting.worldofmilk.glackus.author": "Глеб Устименко",
   "painting.worldofmilk.glackus.title": "glackus",
   "painting.worldofmilk.kapitankastet.author": "Константин Фадеев",
@@ -132,6 +144,9 @@
   "item.worldofmilk.smithing_template.pressed_butter_upgrade.ingredients": "Спресованное масло",
   "item.worldofmilk.smithing_template.pressed_butter_upgrade.base_slot_description": "Поместите железный доспех, инструмент или оружие",
   "item.worldofmilk.smithing_template.pressed_butter_upgrade.additions_slot_description": "Поместите спресованное масло",
+
+  "effect.worldofmilk.butterish": "Маслянистость",
+  "sounds.worldofmilk.etheria_siren": "Супер сирена!",
 
   "genai.version": "LighSync Gemini | Версия 1.2 | (C) LighSync Games. 2023-2025. Все права защищены!",
   "genai.encrypt.error": "Ошибка шифрования: ",

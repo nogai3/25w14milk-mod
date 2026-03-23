@@ -55,6 +55,7 @@
   "advancements.story.pokemon.title": "Pokémon!",
 
   "item.worldofmilk.bread_sword": "Bread Sword",
+  "item.worldofmilk.bread_sword_with_new_texture": "Bread Sword",
   "item.worldofmilk.bread_shovel": "Bread Shovel",
   "item.worldofmilk.bread_pickaxe": "Bread Pickaxe",
   "item.worldofmilk.bread_axe": "Bread Axe",
@@ -83,6 +84,18 @@
   "item.worldofmilk.butter_boots": "Butter Boots",
   "item.worldofmilk.pressed_butter": "Compressed Butter",
   "item.worldofmilk.pressed_butter_upgrade": "Butter Upgrade",
+
+  "item.minecraft.potion.effect.butterish_potion": "Potion of Butterish",
+  "item.minecraft.potion.effect.long_butterish_potion": "Potion of Butterish",
+  "item.minecraft.potion.effect.strong_butterish_potion": "Potion of Butterish",
+  "item.minecraft.splash_potion.effect.butterish_potion": "Splash Potion of Butterish",
+  "item.minecraft.splash_potion.effect.long_butterish_potion": "Splash Potion of Butterish",
+  "item.minecraft.splash_potion.effect.strong_butterish_potion": "Splash Potion of Butterish",
+  "item.minecraft.lingering_potion.effect.butterish_potion": "Lingering Potion of Butterish",
+  "item.minecraft.lingering_potion.effect.long_butterish_potion": "Lingering Potion of Butterish",
+  "item.minecraft.lingering_potion.effect.strong_butterish_potion": "Lingering Potion of Butterish",
+
+  "item.worldofmilk.etheria_reference": "Etheria Reference",
 
   "painting.worldofmilk.glackus.author": "Gleb Ustimenko",
   "painting.worldofmilk.glackus.title": "glackus",
@@ -132,6 +145,9 @@
   "item.worldofmilk.smithing_template.pressed_butter_upgrade.ingredients": "Pressed Butter",
   "item.worldofmilk.smithing_template.pressed_butter_upgrade.base_slot_description": "Add iron armor, weapon or tool",
   "item.worldofmilk.smithing_template.pressed_butter_upgrade.additions_slot_description": "Add Pressed Butter",
+
+  "effect.worldofmilk.butterish": "Butterish",
+  "sounds.worldofmilk.etheria_siren": "Etheria Siren",
 
   "genai.version": "LighSync Gemini | Version 1.2 | (C) LighSync Games. 2023-2025. All rights reserved!",
   "genai.encrypt.error": "Encryption error: ",

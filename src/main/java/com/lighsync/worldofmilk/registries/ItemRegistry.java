@@ -35,7 +35,7 @@ public class ItemRegistry {
 
     public static final RegistryObject<Item> CONCENTRED_MILK = ITEMS.register("concentred_milk", () -> new Item(new Item.Properties().food(Foods.CONCENTRED_MILK)));
     public static final RegistryObject<Item> BREAD_WITH_CONCENTRED_MILK = ITEMS.register("bread_with_concentred_milk", () -> new Item(new Item.Properties().food(Foods.BREAD_WITH_CONCENTRED_MILK)));
-    public static final RegistryObject<Item> BUTTER_BUCKET = ITEMS.register("butter_bucket", () -> new ButterBucketItem(new Item.Properties().food(Foods.CONCENTRED_MILK).stacksTo(16)));
+    public static final RegistryObject<Item> BUTTER_BUCKET = ITEMS.register("butter_bucket", () -> new ButterBucketItem(new Item.Properties().food(Foods.CONCENTRED_MILK).stacksTo(16).craftRemainder(Items.BUCKET)));
     public static final RegistryObject<Item> BREAD_WITH_BUTTER = ITEMS.register("bread_with_butter", () -> new Item(new Item.Properties().food(Foods.MILK_BLOCK)));
     public static final RegistryObject<Item> EASTER_CAKE = ITEMS.register("easter_cake", () -> new Item(new Item.Properties().food(Foods.EASTER_CAKE)));
     public static final RegistryObject<Item> EASTER_CAKE_BLANK = ITEMS.register("easter_cake_blank", () -> new Item(new Item.Properties().food(Foods.EASTER_CAKE_BLANK)));
@@ -50,6 +50,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> PRESSED_BREAD_UPGRADE = ITEMS.register("pressed_bread_upgrade", () -> new PressedBreadUpgradeItem());
 
     public static final RegistryObject<Item> BREAD_SWORD = ITEMS.register("bread_sword", () -> new BreadSwordItem(Tiers.PRESSED_BREAD, new Item.Properties().fireResistant().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> BREAD_SWORD_NEW_TEXTURE = ITEMS.register("bread_sword_with_new_texture", () -> new BreadSwordItem(Tiers.PRESSED_BREAD, new Item.Properties().fireResistant().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> BREAD_PICKAXE = ITEMS.register("bread_pickaxe", () -> new PickaxeItem(Tiers.PRESSED_BREAD, 1, -2.8f, new Item.Properties().fireResistant().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> BREAD_AXE = ITEMS.register("bread_axe", () -> new AxeItem(Tiers.PRESSED_BREAD, 5, -3.0f, new Item.Properties().fireResistant().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> BREAD_SHOVEL = ITEMS.register("bread_shovel", () -> new ShovelItem(Tiers.PRESSED_BREAD, 1, -3.0f, new Item.Properties().fireResistant().rarity(Rarity.EPIC)));
@@ -83,4 +84,5 @@ public class ItemRegistry {
     public static final RegistryObject<Item> TNT_ARROW = ITEMS.register("tnt_arrow", () -> new TNTArrowItem(new Item.Properties().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> MILK_ZOMBIE_SPAWN_EGG = ITEMS.register("milk_zombie_spawn_egg", () -> new ForgeSpawnEggItem(EntityRegistry.MILK_ZOMBIE, 44975,14144467, new Item.Properties()));
+    public static final RegistryObject<Item> ETHERIA_REFERENCE = ITEMS.register("etheria_reference", () -> new EtheriaReferenceItem(new Item.Properties().rarity(Rarity.EPIC)));
 }

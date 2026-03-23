@@ -15,6 +15,7 @@ public class TabRegistry {
             .icon(() -> ItemRegistry.MILK_BLOCK.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 for (var item : ItemRegistry.ITEMS.getEntries()) {
+                    if (item.get().equals(ItemRegistry.ETHERIA_REFERENCE.get())) break;
                     output.accept(item.get());
                 }
             }).build()

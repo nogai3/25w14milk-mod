@@ -1,0 +1,10 @@
+{
+  "etheria_siren": {
+    "subtitle": "sounds.worldofmilk.etheria_siren",
+    "sounds": [
+      "worldofmilk:siren1",
+      "worldofmilk:siren2",
+      "worldofmilk:siren3"
+    ]
+  }
+}

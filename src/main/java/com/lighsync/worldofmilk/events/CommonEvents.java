@@ -8,13 +8,16 @@ import com.lighsync.worldofmilk.client.renderer.MilkZombieRenderer;
 import com.lighsync.worldofmilk.client.renderer.TNTArrowRenderer;
 import com.lighsync.worldofmilk.entities.monster.MilkZombie;
 import com.lighsync.worldofmilk.items.BreadSwordItem;
+import com.lighsync.worldofmilk.items.ButterSwordItem;
 import com.lighsync.worldofmilk.items.Foods;
 import com.lighsync.worldofmilk.registries.*;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -24,8 +27,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.EquipableCarvedPumpkinBlock;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -36,8 +43,9 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
-@Mod.EventBusSubscriber(modid = Worldofmilk.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = Worldofmilk.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CommonEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
@@ -46,6 +54,7 @@ public class CommonEvents {
             MenuScreens.register(MenuRegistry.FRIDGE_MENU.get(), FridgeScreen::new);
         });
     }
+
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(EntityRegistry.ENDER_PEARL_ARROW.get(), EnderPearlArrowRenderer::new);
@@ -55,6 +64,38 @@ public class CommonEvents {
         event.registerBlockEntityRenderer(BlockEntityRegistry.DENSE_MILK_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(BlockEntityRegistry.DENSE_MILK_HANGING_SIGN.get(), HangingSignRenderer::new);
     }
+
+    @SubscribeEvent
+    public static void registerBrewingRecipes(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            BrewingRecipeRegistry.addRecipe(
+                    Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.AWKWARD)),
+                    Ingredient.of(ItemRegistry.PRESSED_BUTTER.get()),
+                    PotionUtils.setPotion(new ItemStack(Items.POTION), PotionRegistry.S45_ZERO_BUTTERISH_POTION.get())
+            );
+            BrewingRecipeRegistry.addRecipe(
+                    Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), PotionRegistry.S45_ZERO_BUTTERISH_POTION.get())),
+                    Ingredient.of(Items.REDSTONE),
+                    PotionUtils.setPotion(new ItemStack(Items.POTION), PotionRegistry.M130_ZERO_BUTTERISH_POTION.get())
+            );
+            BrewingRecipeRegistry.addRecipe(
+                    Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), PotionRegistry.S21_ONE_BUTTERISH_POTION.get())),
+                    Ingredient.of(Items.REDSTONE),
+                    PotionUtils.setPotion(new ItemStack(Items.POTION), PotionRegistry.M130_ZERO_BUTTERISH_POTION.get())
+            );
+            BrewingRecipeRegistry.addRecipe(
+                    Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), PotionRegistry.S45_ZERO_BUTTERISH_POTION.get())),
+                    Ingredient.of(Items.GLOWSTONE_DUST),
+                    PotionUtils.setPotion(new ItemStack(Items.POTION), PotionRegistry.S21_ONE_BUTTERISH_POTION.get())
+            );
+            BrewingRecipeRegistry.addRecipe(
+                    Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), PotionRegistry.M130_ZERO_BUTTERISH_POTION.get())),
+                    Ingredient.of(Items.GLOWSTONE_DUST),
+                    PotionUtils.setPotion(new ItemStack(Items.POTION), PotionRegistry.S21_ONE_BUTTERISH_POTION.get())
+            );
+        });
+    }
+
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(EntityRegistry.MILK_ZOMBIE.get(), MilkZombie.createAttributes().build());
@@ -72,10 +113,31 @@ public class CommonEvents {
             if (!(event.getSource().getEntity() instanceof Player player)) return;
 
             ItemStack mainHand = player.getMainHandItem();
-            if (!(mainHand.getItem() instanceof BreadSwordItem)) return;
+            if (mainHand.getItem() instanceof BreadSwordItem) {
+                float bonus = BreadSwordItem.calcBonusFromFood(player);
+                event.setAmount(event.getAmount() + bonus);
 
-            float bonus = BreadSwordItem.calcBonusFromFood(player);
-            event.setAmount(event.getAmount() + bonus);
+                if (Math.random() < 0.2) {
+                    event.getEntity().setSecondsOnFire(3);
+                }
+            }
+
+            if (mainHand.getItem() instanceof ButterSwordItem) {
+                if (Math.random() < 0.05) {
+                    event.getEntity().setSecondsOnFire(3);
+                }
+            }
+
+            if (hasButterFullSet(player)) {
+                event.getEntity().addEffect(new MobEffectInstance(
+                        MobEffects.MOVEMENT_SLOWDOWN,
+                        200, 0
+                ));
+                event.getEntity().addEffect(new MobEffectInstance(
+                        EffectRegistry.BUTTERISH.get(),
+                        200, 0
+                ));
+            }
         }
 
         @SubscribeEvent
@@ -105,6 +167,13 @@ public class CommonEvents {
                     isWearing(player, EquipmentSlot.CHEST, ItemRegistry.BAKED_BREAD_CHESTPLATE.get()) ||
                     isWearing(player, EquipmentSlot.LEGS, ItemRegistry.BAKED_BREAD_LEGGINGS.get()) ||
                     isWearing(player, EquipmentSlot.FEET, ItemRegistry.BAKED_BREAD_BOOTS.get());
+        }
+
+        private static boolean hasButterFullSet(Player player) {
+            return isWearing(player, EquipmentSlot.HEAD, ItemRegistry.BUTTER_HELMET.get()) ||
+                    isWearing(player, EquipmentSlot.CHEST, ItemRegistry.BUTTER_CHESTPLATE.get()) ||
+                    isWearing(player, EquipmentSlot.LEGS, ItemRegistry.BUTTER_LEGGINGS.get()) ||
+                    isWearing(player, EquipmentSlot.FEET, ItemRegistry.BUTTER_BOOTS.get());
         }
 
         @SubscribeEvent
@@ -161,6 +230,7 @@ public class CommonEvents {
             milkZombie.setPersistenceRequired();
             cow.discard();
             level.addFreshEntity(milkZombie);
+            level.playSound(null, new BlockPos(cow.getBlockX(), cow.getBlockY(), cow.getBlockZ()), SoundRegistry.ETHERIA_SIREN.get(), SoundSource.PLAYERS, 1.0f, 1.0f);
         }
 
         @SubscribeEvent
@@ -173,6 +243,8 @@ public class CommonEvents {
             switch (playerName) {
                 case "glackus", "wandarmo", "plytoni", "kapitankastet" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(Items.MILK_BUCKET)));
                 case "jeb_" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(ItemRegistry.JEB_BLOCK.get())));
+                case "notch" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(Items.APPLE)));
+                case "mralxart_" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(ItemRegistry.ETHERIA_REFERENCE.get())));
                 // case "Dev" -> event.getDrops().add(player.spawnAtLocation(new ItemStack(ItemRegistry.MILK_LAYER_BLOCK.get())));
             }
         }

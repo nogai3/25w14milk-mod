@@ -70,6 +70,30 @@
   "item.worldofmilk.baked_bread_boots": "Сапоги хлѣбныя запечённыя",
   "item.worldofmilk.baked_pressed_bread": "Хлѣбъ спрессованный запечённый (суперъ-кирпичъ)",
 
+  "item.worldofmilk.butter_sword": "Сливочный мечъ (сладостный)",
+  "item.worldofmilk.butter_pickaxe": "Сливочная кирка (сладостная)",
+  "item.worldofmilk.butter_axe": "Сливочный топоръ (сладостный)",
+  "item.worldofmilk.butter_shovel": "Сливочная лопата (сладостная)",
+  "item.worldofmilk.butter_hoe": "Сливочная мотыга (сладостная)",
+  "item.worldofmilk.butter_helmet": "Шлемъ сливочный (сладостный)",
+  "item.worldofmilk.butter_chestplate": "Нагрудникъ сливочный (сладостный)",
+  "item.worldofmilk.butter_leggings": "Поножи сливочные (сладостный)",
+  "item.worldofmilk.butter_boots": "Сапоги сливочные (сладостный)",
+  "item.worldofmilk.pressed_butter": "Спрессованное масло",
+  "item.worldofmilk.pressed_butter_upgrade": "Маслянное улучшеніе (сладостное)",
+
+  "item.minecraft.potion.effect.butterish_potion": "Снадобье маслянистости",
+  "item.minecraft.potion.effect.long_butterish_potion": "Снадобье маслянистости",
+  "item.minecraft.potion.effect.strong_butterish_potion": "Снадобье маслянистости",
+  "item.minecraft.splash_potion.effect.butterish_potion": "Взрывное снадобье маслянистости",
+  "item.minecraft.splash_potion.effect.long_butterish_potion": "Взрывное снадобье маслянистости",
+  "item.minecraft.splash_potion.effect.strong_butterish_potion": "Взрывное снадобье маслянистости",
+  "item.minecraft.lingering_potion.effect.butterish_potion": "Туманное снадобье маслянистости",
+  "item.minecraft.lingering_potion.effect.long_butterish_potion": "Туманное снадобье маслянистости",
+  "item.minecraft.lingering_potion.effect.strong_butterish_potion": "Туманное снадобье маслянистости",
+
+  "item.worldofmilk.etheria_reference": "Отсылка на Этерію?..",
+
   "painting.worldofmilk.glackus.author": "Глѣбъ Устименко",
   "painting.worldofmilk.glackus.title": "glackus",
   "painting.worldofmilk.kapitankastet.author": "Константинъ Фадеевъ",
@@ -112,6 +136,9 @@
   "item.worldofmilk.smithing_template.pressed_bread_upgrade.ingredients": "Хлѣбъ спрессованный (твёрдъ, яко камень, но вкусенъ)",
   "item.worldofmilk.smithing_template.pressed_bread_upgrade.base_slot_description": "Помѣстите доспѣхъ, инструментъ или оружіе незеритовѣйшее (не дрогните рукою)",
   "item.worldofmilk.smithing_template.pressed_bread_upgrade.additions_slot_description": "Возложите хлѣбъ спрессованный (и произнесите: «да будетъ крошка!»)",
+
+  "effect.worldofmilk.butterish": "Маслянистость",
+  "sounds.worldofmilk.etheria_siren": "Суперъ сирена!",
 
   "genai.version": "LighSync Gemini | Версія 1.2 | (C) LighSync Games. 2023-2025. Всѣ права защищены!",
   "genai.encrypt.error": "Ошибка шифрованія: ",

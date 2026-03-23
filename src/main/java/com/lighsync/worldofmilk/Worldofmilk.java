@@ -22,14 +22,17 @@ public class Worldofmilk {
 
         BlockRegistry.BLOCKS.register(modEventBus);
         BlockEntityRegistry.BLOCKS_ENTITIES.register(modEventBus);
-        RecipeRegistry.SERIALIZERS.register(modEventBus);
-        RecipeRegistry.TYPES.register(modEventBus);
         EntityRegistry.ENTITIES.register(modEventBus);
         ItemRegistry.ITEMS.register(modEventBus);
-        MenuRegistry.MENUS.register(modEventBus);
-        TabRegistry.CREATIVE_MODE_TABS.register(modEventBus);
+        EffectRegistry.EFFECTS.register(modEventBus);
+        PotionRegistry.POTIONS.register(modEventBus);
+        SoundRegistry.SOUND_EVENTS.register(modEventBus);
         PaintingRegistry.PAINTING_VARIANTS.register(modEventBus);
         CatVariantRegistry.CAT_VARIANTS.register(modEventBus);
+        RecipeRegistry.SERIALIZERS.register(modEventBus);
+        RecipeRegistry.TYPES.register(modEventBus);
+        MenuRegistry.MENUS.register(modEventBus);
+        TabRegistry.CREATIVE_MODE_TABS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

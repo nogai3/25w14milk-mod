@@ -2,6 +2,7 @@ package com.lighsync.worldofmilk.items;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import com.lighsync.worldofmilk.registries.EffectRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -41,12 +42,14 @@ public class ButterSwordItem extends SwordItem {
         if (attacker instanceof Player player) {
             if (!canSmashAttack(player)) {
                 player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 0));
+                player.addEffect(new MobEffectInstance(EffectRegistry.BUTTERISH.get(), 200, 0));
             }
 
             int food = player.getFoodData().getFoodLevel();
             int loss = Math.max(1, food / 10);
             player.getFoodData().setFoodLevel(Math.max(0, food - loss));
             target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 0));
+            target.addEffect(new MobEffectInstance(EffectRegistry.BUTTERISH.get(), 200, 0));
         }
         return super.hurtEnemy(stack, target, attacker);
     }
