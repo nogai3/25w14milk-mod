@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "combat",
+  "key": {
+    "#": {
+      "item": "worldofmilk:bread_sword_with_new_texture"
+    }
+  },
+  "pattern": [
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "item": "worldofmilk:bread_sword"
+  },
+  "show_notification": true
+}

@@ -1,6 +1,7 @@
 package com.lighsync.worldofmilk.blocks;
 
 import com.lighsync.worldofmilk.blocks.utils.JebBlockMessageManager;
+import com.lighsync.worldofmilk.registries.SoundRegistry;
 import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -33,7 +34,7 @@ public class   JebBlock extends Block {
             SoundEvents.HORSE_HURT, SoundEvents.PLAYER_HURT, SoundEvents.PLAYER_DEATH,
             SoundEvents.ENDERMAN_AMBIENT, SoundEvents.ENDERMAN_DEATH, SoundEvents.PLAYER_HURT_DROWN,
             SoundEvents.SHULKER_AMBIENT, SoundEvents.PILLAGER_AMBIENT, SoundEvents.PILLAGER_HURT,
-            SoundEvents.STONE_BREAK, SoundEvents.WOOD_BREAK
+            SoundEvents.STONE_BREAK, SoundEvents.WOOD_BREAK, SoundRegistry.ETHERIA_SIREN.get()
     };
 
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;

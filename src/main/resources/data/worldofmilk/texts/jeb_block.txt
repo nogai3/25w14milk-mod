@@ -1,7 +1,6 @@
 Hello world!
 I`m Jeb_.
 We accidentally deleted half of the code new snapshot (it was me)
-Snapshot by our friends: LighSync Games.
 Give me iron!
 What? It`s creeper?
 Creeper it`s mistake!
@@ -15,10 +14,11 @@ Also try GlackuS!
 Also try FNAG!
 Also try LighSync Games.
 Made by Mojang!
-Made by LighSync!
 private MilkBlock milkBlock = new MilkBlock();
 0 != 1
 System.out.println("Written in Java");
+Worldofmilk.getLogger.info("Written in Java");
+ResourceLocation.fromNamespaceAndPath(Worldofmilk.MODID, "textures/block/milk_block.png");
 Because i`m in Milk Block?
 §eRayTracing joined game...
 §ejeb_ joined game...
@@ -34,11 +34,11 @@ Everything is decided mom I am...
 Don't believe the evil cynics...
 “I had bread with condensed milk on it today” - Jeb
 Creeper oooooh maaaaaaaaaan...
-Welcome to Steve`s Glakus - Dreams world!
 Now as Mod!
-zovchinsky!
 i created this game!
 glackus has amazing skill
 jeb_ has amazing hair
-kapitankastet has amazing computer
-plytoni has amazing brother
+KAPITANKASTET has amazing computer
+PLYTONI has amazing brother
+Java 8 + 8 + 4 + 1 = Java 21!
+Etheria the best!

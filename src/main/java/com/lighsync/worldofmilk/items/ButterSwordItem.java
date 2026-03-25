@@ -16,7 +16,7 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
 public class ButterSwordItem extends SwordItem {
-    private static final int DEFAULT_ATTACK_DAMAGE = 4;
+    private static final int DEFAULT_ATTACK_DAMAGE = 3;
     private static final float DEFAULT_ATTACK_SPEED = -2.4F;
     public static final float SMASH_ATTACK_THRESHOLD = 6.0F;
 

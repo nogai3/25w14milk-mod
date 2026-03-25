@@ -1,10 +1,11 @@
 Made by glackus!
 Made by Mojang!
-Made by LighSync!
 25w14milk!
 Because i`m in Milk Block?
 private MilkBlock milkBlock = new MilkBlock();
 System.out.println("Written in Java");
+Worldofmilk.getLogger.info("Written in Java");
+ResourceLocation.fromNamespaceAndPath(Worldofmilk.MODID, "textures/block/milk_block.png");
 0 != 1
 Hello, World!
 Snapshot by LighSync Games.
@@ -32,7 +33,6 @@ glackus is watching you...
 wandarmo is watching you...
 PLYTONI is watching you...
 KAPITANKASTET is watching you...
-if (game == Minecraft) { return theBestGameEver(); }
 All done!
 This game will be updating!
 Optimized for Bread PC`s!
@@ -45,9 +45,8 @@ PLYTONI - god!
 KAPITANKASTET - god!
 jeb_ - drops jeb block
 glackus and others - drops milk bucket
-(C) LighSync Games. 2023-2026.
-(C) Mojang AB. 2009-2026.
 Java 30!
+Java 8 + 8 + 4 + 1 = Java 21!
 April fools!
 Idk what is it?
 42587u90823475oHGFLHGK, cat at keyboard
@@ -56,6 +55,7 @@ Idk what is it?
 0.5% of code, written by my dog! Mary
 0.5% of code, written by glackus!
 More milky!
+Etheria the best!
 "You write the code and I'll add it" - Nathan Addams (Dinnerbone)
 "My favorite color is beach ball" - Jens Bergensten (jeb_)
 "Debuging in runtime - is very efficient" - Markus Persson (Notch)

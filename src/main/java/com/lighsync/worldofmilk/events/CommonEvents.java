@@ -131,11 +131,11 @@ public class CommonEvents {
             if (hasButterFullSet(player)) {
                 event.getEntity().addEffect(new MobEffectInstance(
                         MobEffects.MOVEMENT_SLOWDOWN,
-                        200, 0
+                        50, 0
                 ));
                 event.getEntity().addEffect(new MobEffectInstance(
                         EffectRegistry.BUTTERISH.get(),
-                        200, 0
+                        50, 0
                 ));
             }
         }
@@ -156,23 +156,23 @@ public class CommonEvents {
         }
 
         private static boolean hasFullSet(Player player) {
-            return isWearing(player, EquipmentSlot.HEAD, ItemRegistry.BREAD_HELMET.get()) ||
-                    isWearing(player, EquipmentSlot.CHEST, ItemRegistry.BREAD_CHESTPLATE.get()) ||
-                    isWearing(player, EquipmentSlot.LEGS, ItemRegistry.BREAD_LEGGINGS.get()) ||
+            return isWearing(player, EquipmentSlot.HEAD, ItemRegistry.BREAD_HELMET.get()) &&
+                    isWearing(player, EquipmentSlot.CHEST, ItemRegistry.BREAD_CHESTPLATE.get()) &&
+                    isWearing(player, EquipmentSlot.LEGS, ItemRegistry.BREAD_LEGGINGS.get()) &&
                     isWearing(player, EquipmentSlot.FEET, ItemRegistry.BREAD_BOOTS.get());
         }
 
         private static boolean hasBakedFullSet(Player player) {
-            return isWearing(player, EquipmentSlot.HEAD, ItemRegistry.BAKED_BREAD_HELMET.get()) ||
-                    isWearing(player, EquipmentSlot.CHEST, ItemRegistry.BAKED_BREAD_CHESTPLATE.get()) ||
-                    isWearing(player, EquipmentSlot.LEGS, ItemRegistry.BAKED_BREAD_LEGGINGS.get()) ||
+            return isWearing(player, EquipmentSlot.HEAD, ItemRegistry.BAKED_BREAD_HELMET.get()) &&
+                    isWearing(player, EquipmentSlot.CHEST, ItemRegistry.BAKED_BREAD_CHESTPLATE.get()) &&
+                    isWearing(player, EquipmentSlot.LEGS, ItemRegistry.BAKED_BREAD_LEGGINGS.get()) &&
                     isWearing(player, EquipmentSlot.FEET, ItemRegistry.BAKED_BREAD_BOOTS.get());
         }
 
         private static boolean hasButterFullSet(Player player) {
-            return isWearing(player, EquipmentSlot.HEAD, ItemRegistry.BUTTER_HELMET.get()) ||
-                    isWearing(player, EquipmentSlot.CHEST, ItemRegistry.BUTTER_CHESTPLATE.get()) ||
-                    isWearing(player, EquipmentSlot.LEGS, ItemRegistry.BUTTER_LEGGINGS.get()) ||
+            return isWearing(player, EquipmentSlot.HEAD, ItemRegistry.BUTTER_HELMET.get()) &&
+                    isWearing(player, EquipmentSlot.CHEST, ItemRegistry.BUTTER_CHESTPLATE.get()) &&
+                    isWearing(player, EquipmentSlot.LEGS, ItemRegistry.BUTTER_LEGGINGS.get()) &&
                     isWearing(player, EquipmentSlot.FEET, ItemRegistry.BUTTER_BOOTS.get());
         }
 
@@ -230,7 +230,6 @@ public class CommonEvents {
             milkZombie.setPersistenceRequired();
             cow.discard();
             level.addFreshEntity(milkZombie);
-            level.playSound(null, new BlockPos(cow.getBlockX(), cow.getBlockY(), cow.getBlockZ()), SoundRegistry.ETHERIA_SIREN.get(), SoundSource.PLAYERS, 1.0f, 1.0f);
         }
 
         @SubscribeEvent
