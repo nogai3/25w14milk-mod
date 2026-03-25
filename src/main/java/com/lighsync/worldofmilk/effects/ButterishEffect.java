@@ -1,15 +1,14 @@
 package com.lighsync.worldofmilk.effects;
 
-import com.lighsync.worldofmilk.effects.utils.ColorGen;
+import com.lighsync.worldofmilk.utils.ColorGen;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.phys.Vec3;
 
 public class ButterishEffect extends MobEffect {
     public ButterishEffect() {
-        super(MobEffectCategory.BENEFICIAL, ColorGen.toIntFormat(245, 215, 66, 1));
+        super(MobEffectCategory.BENEFICIAL, ColorGen.toIntFormatFromRGBA(245, 215, 66, 1));
     }
 
     @Override

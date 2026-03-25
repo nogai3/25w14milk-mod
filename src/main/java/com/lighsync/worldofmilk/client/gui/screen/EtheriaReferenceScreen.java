@@ -8,6 +8,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
 public class EtheriaReferenceScreen extends Screen {
+    private int ticksCount = 0;
+
     public EtheriaReferenceScreen() {
         super(Component.literal("Nothing..."));
     }
@@ -36,12 +38,25 @@ public class EtheriaReferenceScreen extends Screen {
     }
 
     @Override
+    public void tick() {
+        super.tick();
+        ticksCount++;
+
+        if (ticksCount >= 200) {
+            if (this.minecraft != null) {
+                this.minecraft.setScreen(null);
+                this.minecraft.getSoundManager().stop();
+            }
+        }
+    }
+
+    @Override
     public void onClose() {
         super.onClose();
     }
 
     @Override
     public boolean shouldCloseOnEsc() {
-        return true;
+        return false;
     }
 }

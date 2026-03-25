@@ -33,7 +33,11 @@ public class FridgeBlock extends AbstractFurnaceBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return createFurnaceTicker(level, type, BlockEntityRegistry.FRIDGE_BLOCK.get());
+        return level.isClientSide ? null : createTickerHelper(
+                type,
+                BlockEntityRegistry.FRIDGE_BLOCK.get(),
+                FridgeBlockEntity::serverTick
+        );
     }
 
     @Override

@@ -55,6 +55,7 @@
   "advancements.story.pokemon.title": "Покемон!",
 
   "item.worldofmilk.bread_sword": "Хлебный меч",
+  "item.worldofmilk.bread_sword_with_new_texture": "Хлебный меч",
   "item.worldofmilk.bread_shovel": "Хлебная лопата",
   "item.worldofmilk.bread_pickaxe": "Хлебная кирка",
   "item.worldofmilk.bread_axe": "Хлебный топор",
@@ -129,7 +130,7 @@
 
   "container.worldofmilk.fridge": "Холодильник",
   "stat.worldofmilk.interact_with_fridge": "Взаимодействий с Холодильником",
-  "gui.recipebook.toogleRecipes.fridgeable": "Рецепты для холодильника",
+  "gui.recipebook.toggleRecipes.fridgeable": "Рецепты для холодильника",
 
   "container.creative.worldofmilk": "Обновление молочка",
 
