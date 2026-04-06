@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "worldofmilk:pressed_butter"
+    },
+    "E":{
+      "item": "minecraft:egg"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "S": {
+      "item": "minecraft:wheat_seeds"
+    }
+  },
+  "pattern": [
+    "###",
+    "WSW",
+    "EEE"
+  ],
+  "result": {
+    "count": 2,
+    "item": "worldofmilk:dense_milk_button"
+  },
+  "show_notification": true
+}

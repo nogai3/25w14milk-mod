@@ -182,6 +182,11 @@ public class BlockRegistry {
                             .pushReaction(PushReaction.BLOCK)
     ));
 
+    public static final RegistryObject<Block> DINNERBONE_BLOCK = BLOCKS.register("dinnerbone_block",
+            () -> new DinnerboneBlock(
+                    BlockBehaviour.Properties.copy(BlockRegistry.JEB_BLOCK.get())
+    ));
+
     public static final RegistryObject<Block> FRIDGE_BLOCK = BLOCKS.register("fridge",
             () -> new FridgeBlock(
                     BlockBehaviour.Properties.copy(Blocks.FURNACE)

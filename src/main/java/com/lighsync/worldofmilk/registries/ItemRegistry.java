@@ -30,13 +30,15 @@ public class ItemRegistry {
     public static final RegistryObject<Item> CARVED_DENSE_MILK_SLAB = ITEMS.register("carved_dense_milk_slab", () -> new BlockItem(BlockRegistry.CARVED_DENSE_MILK_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<Item> CARVED_DENSE_MILK_WALL = ITEMS.register("carved_dense_milk_wall", () -> new BlockItem(BlockRegistry.CARVED_DENSE_MILK_WALL.get(), new Item.Properties()));
     public static final RegistryObject<Item> CARVED_DENSE_MILK_STAIRS = ITEMS.register("carved_dense_milk_stairs", () -> new BlockItem(BlockRegistry.CARVED_DENSE_MILK_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<Item> JEB_BLOCK = ITEMS.register("jeb_block", () -> new BlockItem(BlockRegistry.JEB_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> JEB_BLOCK = ITEMS.register("jeb_block", () -> new BlockItem(BlockRegistry.JEB_BLOCK.get(), new Item.Properties().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> DINNERBONE_BLOCK = ITEMS.register("dinnerbone_block", () -> new BlockItem(BlockRegistry.DINNERBONE_BLOCK.get(), new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> FRIDGE_BLOCK = ITEMS.register("fridge", () -> new BlockItem(BlockRegistry.FRIDGE_BLOCK.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> CONCENTRED_MILK = ITEMS.register("concentred_milk", () -> new Item(new Item.Properties().food(Foods.CONCENTRED_MILK)));
     public static final RegistryObject<Item> BREAD_WITH_CONCENTRED_MILK = ITEMS.register("bread_with_concentred_milk", () -> new Item(new Item.Properties().food(Foods.BREAD_WITH_CONCENTRED_MILK)));
     public static final RegistryObject<Item> BUTTER_BUCKET = ITEMS.register("butter_bucket", () -> new ButterBucketItem(new Item.Properties().food(Foods.CONCENTRED_MILK).stacksTo(16).craftRemainder(Items.BUCKET)));
     public static final RegistryObject<Item> BREAD_WITH_BUTTER = ITEMS.register("bread_with_butter", () -> new Item(new Item.Properties().food(Foods.MILK_BLOCK)));
+    public static final RegistryObject<Item> DOUGH = ITEMS.register("dough", () -> new Item(new Item.Properties().food(Foods.EASTER_CAKE_BLANK)));
     public static final RegistryObject<Item> EASTER_CAKE = ITEMS.register("easter_cake", () -> new Item(new Item.Properties().food(Foods.EASTER_CAKE)));
     public static final RegistryObject<Item> EASTER_CAKE_BLANK = ITEMS.register("easter_cake_blank", () -> new Item(new Item.Properties().food(Foods.EASTER_CAKE_BLANK)));
     public static final RegistryObject<Item> SPRINKLES = ITEMS.register("sprinkles", () -> new Item(new Item.Properties().food(Foods.SPRIKNLES)));

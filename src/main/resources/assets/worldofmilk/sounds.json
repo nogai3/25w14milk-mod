@@ -6,5 +6,15 @@
       "worldofmilk:siren2",
       "worldofmilk:siren3"
     ]
+  },
+  "dinnerbone_rotation": {
+    "subtitle": "sounds.worldofmilk.dinnerbone_rotation",
+    "sounds": [
+      "worldofmilk:rotation1",
+      "worldofmilk:rotation2",
+      "worldofmilk:rotation3",
+      "worldofmilk:rotation4",
+      "worldofmilk:rotation5"
+    ]
   }
 }

@@ -2,7 +2,6 @@ package com.lighsync.worldofmilk.blocks;
 
 import com.lighsync.worldofmilk.blocks.utils.JebBlockMessageManager;
 import com.lighsync.worldofmilk.registries.SoundRegistry;
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
@@ -20,11 +19,10 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.common.data.SoundDefinition;
 
 import javax.annotation.Nullable;
 
-public class   JebBlock extends Block {
+public class JebBlock extends Block {
     private static final String CRYPTED_API_KEY = "";
     private boolean canUseBlock = true;
     private static final JebBlockMessageManager MESSAGE_MANAGER = JebBlockMessageManager.INSTANCE;

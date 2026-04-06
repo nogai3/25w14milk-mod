@@ -11,6 +11,7 @@ public class SoundRegistry {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Worldofmilk.MODID);
 
     public static final RegistryObject<SoundEvent> ETHERIA_SIREN = registerSoundEvent("etheria_siren");
+    public static final RegistryObject<SoundEvent> ROTATION = registerSoundEvent("dinnerbone_rotation");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(

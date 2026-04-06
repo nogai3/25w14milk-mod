@@ -5,6 +5,7 @@
 
   "block.worldofmilk.milk_block": "Milk Block",
   "block.worldofmilk.jeb_block": "Jeb Block",
+  "block.worldofmilk.dinnerbone_block": "Dinnerbone Block",
   "block.worldofmilk.milk_layer_block": "Layered Milk",
   "block.worldofmilk.dense_milk_block": "Dense Milk Block",
   "block.worldofmilk.dense_milk_slab": "Dense Milk Slab",
@@ -27,6 +28,7 @@
   "item.worldofmilk.bread_with_concentred_milk": "Bread with Condensed Milk",
   "item.worldofmilk.butter_bucket": "Butter Bucket",
   "item.worldofmilk.bread_with_butter": "Bread with Butter",
+  "item.worldofmilk.dough": "Dough",
   "item.worldofmilk.easter_cake_blank": "Easter Cake Base",
   "item.worldofmilk.easter_cake": "Easter Cake",
   "item.worldofmilk.sprinkles": "Sprinkles",
@@ -148,6 +150,7 @@
 
   "effect.worldofmilk.butterish": "Butterish",
   "sounds.worldofmilk.etheria_siren": "Etheria Siren",
+  "sounds.worldofmilk.dinnerbone_rotation": "Dinnerbone Rotation",
 
   "genai.version": "LighSync Gemini | Version 1.2 | (C) LighSync Games. 2023-2025. All rights reserved!",
   "genai.encrypt.error": "Encryption error: ",

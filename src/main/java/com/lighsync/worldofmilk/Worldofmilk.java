@@ -1,5 +1,6 @@
 package com.lighsync.worldofmilk;
 
+import com.lighsync.worldofmilk.networking.Networking;
 import com.lighsync.worldofmilk.registries.*;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,6 +34,8 @@ public class Worldofmilk {
         RecipeRegistry.TYPES.register(modEventBus);
         MenuRegistry.MENUS.register(modEventBus);
         TabRegistry.CREATIVE_MODE_TABS.register(modEventBus);
+
+        Networking.init();
 
         MinecraftForge.EVENT_BUS.register(this);
     }

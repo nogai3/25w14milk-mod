@@ -5,6 +5,7 @@
 
   "block.worldofmilk.milk_block": "Блокъ молока (чистѣйшій)",
   "block.worldofmilk.jeb_block": "Блокъ Джеба (непостижимъ)",
+  "block.worldofmilk.dinnerbone_block": "Блокъ Диннербоуна (переворотный)",
   "block.worldofmilk.milk_layer_block": "Молоко слоистое (многослое)",
   "block.worldofmilk.dense_milk_block": "Блокъ молока уплотнённаго",
   "block.worldofmilk.dense_milk_slab": "Плита изъ молока уплотнённаго",
@@ -27,6 +28,7 @@
   "item.worldofmilk.bread_with_concentred_milk": "Хлѣбъ со сгущённымъ молокомъ",
   "item.worldofmilk.butter_bucket": "Ведро сливочнаго масла (роднѣйшего)",
   "item.worldofmilk.bread_with_butter": "Хлѣбъ съ масломъ (дѣтская благодать)",
+  "item.worldofmilk.dough": "Тѣсто",
   "item.worldofmilk.easter_cake_blank": "Заготовка торта пасхальнаго",
   "item.worldofmilk.easter_cake": "Тортъ пасхальный (да будетъ праздникъ!)",
   "item.worldofmilk.sprinkles": "Посыпь сладкая (мелкія радости)",
@@ -148,6 +150,7 @@
 
   "effect.worldofmilk.butterish": "Маслянистость",
   "sounds.worldofmilk.etheria_siren": "Суперъ сирена!",
+  "sounds.worldofmilk.dinnerbone_rotation": "Переворотъ Диннербоуна!",
 
   "genai.version": "LighSync Gemini | Версія 1.2 | (C) LighSync Games. 2023-2025. Всѣ права защищены!",
   "genai.encrypt.error": "Ошибка шифрованія: ",
